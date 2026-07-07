@@ -308,7 +308,7 @@ script = ExtResource("1_hjiwg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=355022236]
 sprite_frames = SubResource("SpriteFrames_te6hp")
 animation = &"blue-walk"
-frame_progress = 0.38962027
+frame_progress = 0.4905592
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1795944453]
 position = Vector2(-1, -2)
