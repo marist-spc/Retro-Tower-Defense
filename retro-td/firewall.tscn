@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dhnle82fo316u" path="res://roook.png" id="1_664hb"]
 [ext_resource type="Texture2D" uid="uid://b6nxty01hmy6i" path="res://fire.png" id="2_x700o"]
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="3_ue4l0"]
+[ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="4_kha8f"]
+[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_gcfbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsii"]
 texture = ExtResource("1_664hb")
@@ -52,3 +54,12 @@ position = Vector2(-7, 533)
 rotation = -0.001974331
 
 [node name="Hud" parent="." unique_id=1658330229 instance=ExtResource("3_ue4l0")]
+
+[node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("4_kha8f")]
+pathAssign = NodePath("../Path2D/PathFollow2D")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=761466973]
+autostart = true
+script = ExtResource("5_gcfbm")
+
+[connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]

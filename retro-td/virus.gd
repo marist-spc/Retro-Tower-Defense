@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @export var colorType=red
 
+# when spawning a new virus, we must set this variable
+@export var path: PathFollow2D
+
 var red=1
 var blue=2
 var green=3
@@ -11,7 +14,9 @@ var brown=6
 var gray=7
 
 var health
-var speed
+# speed of virus in pixels/sec
+var speed=40
+var progress=0
 
 var redHealth=1
 var blueHealth=2
@@ -34,33 +39,39 @@ func _ready() -> void:
 	if colorType==red:
 		$AnimatedSprite2D.play("red-walk")
 		health=redHealth
-		speed=redSpeed
+		speed*=redSpeed 
 	elif colorType==blue:
 		$AnimatedSprite2D.play("blue-walk")
 		health=blueHealth
-		speed=blueSpeed
+		speed*=blueSpeed
 	elif colorType==green:
 		$AnimatedSprite2D.play("green-walk")
 		health=greenHealth
-		speed=greenSpeed
+		speed*=greenSpeed
 	elif colorType==yellow:
 		$AnimatedSprite2D.play("yellow-walk")
 		health=yellowHealth
-		speed=yellowSpeed
+		speed*=yellowSpeed
 	elif colorType==pink:
 		$AnimatedSprite2D.play("pink-walk")
 		health=pinkHealth
-		speed=pinkSpeed
+		speed*=pinkSpeed
 	elif colorType==brown:
 		$AnimatedSprite2D.play("brown-walk")
 		health=brownHealth
-		speed=brownSpeed
+		speed*=brownSpeed
 	elif colorType==gray:
 		$AnimatedSprite2D.play("gray-walk")
 		health=grayHealth
-		speed=graySpeed
+		speed*=graySpeed
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	
+	# increase the progress of the virus based on the speed and delta
+	progress+=speed*delta
+	path.progress = progress
+	position = path.position
+	
+	

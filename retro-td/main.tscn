@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cfgq0cfaa8o5q"]
 
 [ext_resource type="Texture2D" uid="uid://c3blkrrsf7jkv" path="res://tile_sheet_128px_by_128px.png" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="2_0xm2m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -31,3 +32,6 @@ curve = SubResource("Curve2D_ig7tw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="TileMapLayer/Path2D" unique_id=1080315445]
 position = Vector2(0, 144)
+
+[node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("2_0xm2m")]
+pathAssign = NodePath("../TileMapLayer/Path2D/PathFollow2D")
