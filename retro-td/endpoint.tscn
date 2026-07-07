@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://31vsekqt52ig"]
+
+[ext_resource type="Texture2D" uid="uid://b5nqumsnspmj2" path="res://art/end-path-port-sprites/End Path Port-1.png.png" id="1_5cqd8"]
+[ext_resource type="Texture2D" uid="uid://bq86vgdm5vthg" path="res://art/end-path-port-sprites/End Path Port-2.png.png" id="2_w36o4"]
+[ext_resource type="Texture2D" uid="uid://c6xbs2f1dqv6v" path="res://art/end-path-port-sprites/End Path Port-3.png.png" id="3_bdhjf"]
+[ext_resource type="Texture2D" uid="uid://cx4o7r1ui6ngm" path="res://art/end-path-port-sprites/End Path Port-4.png.png" id="4_w6bwk"]
+[ext_resource type="Texture2D" uid="uid://busyhkd2rl8ux" path="res://art/end-path-port-sprites/End Path Port-5.png.png" id="5_mvb6i"]
+[ext_resource type="Texture2D" uid="uid://cevhgfkjrmtju" path="res://art/end-path-port-sprites/End Path Port-6.png.png" id="6_iw0a6"]
+[ext_resource type="Texture2D" uid="uid://ejjecw17up5f" path="res://art/end-path-port-sprites/End Path Port-7.png.png" id="7_vmtnh"]
+[ext_resource type="Texture2D" uid="uid://bv7q1ha7w1k8b" path="res://art/end-path-port-sprites/End Path Port-8.png.png" id="8_sn341"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te6hp"]
+size = Vector2(13, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te6hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5cqd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w36o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bdhjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w6bwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mvb6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iw0a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vmtnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sn341")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="endpoint" type="Area2D" unique_id=935857843]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1288031808]
+position = Vector2(9.5, 0)
+shape = SubResource("RectangleShape2D_te6hp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=248658098]
+sprite_frames = SubResource("SpriteFrames_te6hp")
+frame_progress = 0.13029121
