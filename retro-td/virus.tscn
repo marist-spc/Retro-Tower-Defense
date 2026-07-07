@@ -308,8 +308,14 @@ script = ExtResource("1_hjiwg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=355022236]
 sprite_frames = SubResource("SpriteFrames_te6hp")
 animation = &"blue-walk"
-frame_progress = 0.5198866
+frame_progress = 0.81417775
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1795944453]
 position = Vector2(-1, -2)
 shape = SubResource("CircleShape2D_7c84j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=245883417]
+position = Vector2(-6, 0)
+rect = Rect2(-10, -16, 30, 31)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
