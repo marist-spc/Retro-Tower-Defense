@@ -15,7 +15,7 @@ var gray=7
 
 var health
 # speed of virus in pixels/sec
-var speed=40
+var speed=37
 var progress=0
 
 var redHealth=1
@@ -80,7 +80,6 @@ func _process(delta: float) -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
-	
 
 func health_zero():
 	pass
