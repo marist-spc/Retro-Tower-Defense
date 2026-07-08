@@ -45,6 +45,7 @@ animations = [{
 }]
 
 [node name="endpoint" type="Area2D" unique_id=935857843]
+scale = Vector2(0.8, 0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1288031808]
 position = Vector2(9.5, 0)
@@ -52,4 +53,5 @@ shape = SubResource("RectangleShape2D_te6hp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=248658098]
 sprite_frames = SubResource("SpriteFrames_te6hp")
-frame_progress = 0.13029121
+autoplay = "default"
+frame_progress = 0.0019529196

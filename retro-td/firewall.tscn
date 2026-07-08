@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="3_ue4l0"]
 [ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="4_kha8f"]
 [ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_gcfbm"]
+[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="6_gcfbm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsii"]
 texture = ExtResource("1_664hb")
@@ -61,5 +62,9 @@ pathAssign = NodePath("../Path2D/PathFollow2D")
 [node name="SpawnTimer" type="Timer" parent="." unique_id=761466973]
 autostart = true
 script = ExtResource("5_gcfbm")
+
+[node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("6_gcfbm")]
+position = Vector2(988, 532)
+scale = Vector2(0.8, 0.8)
 
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
