@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://on1hbilyi5cc"]
+
+[ext_resource type="Script" path="res://user_interface.gd" id="1_kxhmu"]
+
+[node name="User_Interface" type="CanvasLayer" unique_id=1477452643]
+script = ExtResource("1_kxhmu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=97050960]
