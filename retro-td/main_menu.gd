@@ -13,3 +13,15 @@ func _process(delta: float) -> void:
 
 func _on_texture_button_pressed():
 	pass
+
+
+func _on_motherboard_button_pressed():
+	print("motherboard_open")
+
+
+func _on_windows_button_pressed():
+	print("windows_open")
+
+
+func _on_firewall_button_pressed():
+	print("firewall_open")
