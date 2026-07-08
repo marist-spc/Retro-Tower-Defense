@@ -67,3 +67,4 @@ script = ExtResource("5_gcfbm")
 position = Vector2(988, 532)
 
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]

@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c8ihng2jdfg1c" path="res://wave_list.gd" id="1_d45qv"]
 [ext_resource type="PackedScene" uid="uid://bsmqw6ufb4tnn" path="res://virus.tscn" id="2_xnm0u"]
+[ext_resource type="PackedScene" uid="uid://cgs5cotxkn1hu" path="res://spam_email_boss.tscn" id="3_xnm0u"]
+[ext_resource type="PackedScene" uid="uid://cj7b2sgg7hkeo" path="res://poppup.tscn" id="4_s5wot"]
 
 [node name="WaveList" type="Node2D" unique_id=2102804863]
 script = ExtResource("1_d45qv")
 virusProtoype = ExtResource("2_xnm0u")
+SpamEmail = ExtResource("3_xnm0u")
+Poppup = ExtResource("4_s5wot")

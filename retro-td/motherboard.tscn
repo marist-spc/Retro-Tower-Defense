@@ -66,4 +66,5 @@ position = Vector2(987.99994, 143)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1329883378]
 
+[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]

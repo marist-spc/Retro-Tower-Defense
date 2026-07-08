@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://djcp4ctddnlf5"]
+
+[ext_resource type="Texture2D" uid="uid://bpqov253g1jnq" path="res://art/MyDoom/head/MyDoom-head-1.png.png" id="1_0dbrs"]
+[ext_resource type="Texture2D" uid="uid://bo3elw87tqmrh" path="res://art/MyDoom/head/MyDoom-head-2.png.png" id="2_708iw"]
+[ext_resource type="Texture2D" uid="uid://cddbsr4snabhj" path="res://art/MyDoom/head/MyDoom-head-3.png.png" id="3_50kqe"]
+[ext_resource type="Texture2D" uid="uid://c02fw71pabxem" path="res://art/MyDoom/head/MyDoom-head-4.png.png" id="4_pc0w3"]
+[ext_resource type="Texture2D" uid="uid://bayr64apykw03" path="res://art/MyDoom/head/MyDoom-head-5.png.png" id="5_pfvi0"]
+[ext_resource type="Texture2D" uid="uid://bfv3f6xctb6wq" path="res://art/MyDoom/head/MyDoom-head-6.png.png" id="6_xwmfs"]
+[ext_resource type="Texture2D" uid="uid://br03v3gw320yd" path="res://art/MyDoom/head/MyDoom-head-shrink.png.png" id="7_unhnw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te6hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0dbrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_708iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_50kqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pc0w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pfvi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xwmfs")
+}],
+"loop": 1,
+"name": &"headGo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_unhnw")
+}],
+"loop": 1,
+"name": &"shrink",
+"speed": 5.0
+}]
+
+[node name="Mydoom" type="CharacterBody2D" unique_id=1818329966]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2059761101]
+sprite_frames = SubResource("SpriteFrames_te6hp")
+animation = &"shrink"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1251578329]
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=658278123]
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." unique_id=954039389]
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="." unique_id=1157415634]
