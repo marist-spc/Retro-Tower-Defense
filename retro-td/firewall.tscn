@@ -33,7 +33,7 @@ sources/0 = SubResource("TileSetAtlasSource_gdxoh")
 
 [sub_resource type="Curve2D" id="Curve2D_nlcc7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -7, 533, 0, 0, 0, 0, 1006, 531)
+"points": PackedVector2Array(0, 0, 0, 0, -7, 533, 0, 0, 0, 0, 1037, 534)
 }
 point_count = 2
 
@@ -52,7 +52,7 @@ curve = SubResource("Curve2D_nlcc7")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=108740713]
 position = Vector2(-7, 533)
-rotation = -0.001974331
+rotation = 0.00095785415
 
 [node name="Hud" parent="." unique_id=1658330229 instance=ExtResource("3_ue4l0")]
 
@@ -65,6 +65,5 @@ script = ExtResource("5_gcfbm")
 
 [node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("6_gcfbm")]
 position = Vector2(988, 532)
-scale = Vector2(0.8, 0.8)
 
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]

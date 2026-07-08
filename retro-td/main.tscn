@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3blkrrsf7jkv" path="res://tile_sheet_128px_by_128px.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="3_h2yge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -17,7 +18,7 @@ sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
 [sub_resource type="Curve2D" id="Curve2D_ig7tw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 144, 0, 0, 0, 0, 334, 144, 0, 0, 0, 0, 336, 430, 0, 0, 0, 0, 140, 430, 0, 0, 0, 0, 141, 301, 0, 0, 0, 0, 495, 303, 0, 0, 0, 0, 494, 397, 0, 0, 0, 0, 718, 397, 0, 0, 0, 0, 719, 653, 0, 0, 0, 0, 400, 655, 0, 0, 0, 0, 399, 591, 0, 0, 0, 0, 206, 592, 0, 0, 0, 0, 207, 781, 0, 0, 0, 0, 942, 783, 0, 0, 0, 0, 941, 909, 0, 0, 0, 0, 496, 910, 0, 0, 0, 0, 495, 1015)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 144, 0, 0, 0, 0, 334, 144, 0, 0, 0, 0, 336, 430, 0, 0, 0, 0, 140, 430, 0, 0, 0, 0, 141, 301, 0, 0, 0, 0, 495, 303, 0, 0, 0, 0, 494, 397, 0, 0, 0, 0, 718, 397, 0, 0, 0, 0, 719, 653, 0, 0, 0, 0, 400, 655, 0, 0, 0, 0, 399, 591, 0, 0, 0, 0, 206, 592, 0, 0, 0, 0, 207, 781, 0, 0, 0, 0, 942, 783, 0, 0, 0, 0, 941, 909, 0, 0, 0, 0, 496, 910, 0, 0, 0, 0, 496, 1035)
 }
 point_count = 17
 
@@ -35,3 +36,11 @@ position = Vector2(0, 144)
 
 [node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("2_0xm2m")]
 pathAssign = NodePath("../TileMapLayer/Path2D/PathFollow2D")
+
+[node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("3_h2yge")]
+position = Vector2(495.99997, 987.99994)
+rotation = 1.5686346
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=2072539767]
+
+[connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
