@@ -10,15 +10,17 @@ loop_end = 1041000
 mix_rate = 48000
 stereo = true
 
-[node name="Hud" type="CanvasLayer" unique_id=1658330229]
+[node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen")]
 script = ExtResource("1_37p78")
+cryptoScreen = NodePath("Crypto")
+securityScreen = NodePath("Health")
 
 [node name="Crypto" type="Label" parent="." unique_id=709436791]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
 theme_override_font_sizes/font_size = 32
-text = "Crypto:"
+text = "Crypto: 500"
 
 [node name="Health" type="Label" parent="." unique_id=1281946856]
 offset_left = 3.0
@@ -27,7 +29,7 @@ offset_right = 43.0
 offset_bottom = 76.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
 theme_override_font_sizes/font_size = 32
-text = "Security:"
+text = "Security: 100"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=401429548]
 stream = SubResource("AudioStreamWAV_37p78")

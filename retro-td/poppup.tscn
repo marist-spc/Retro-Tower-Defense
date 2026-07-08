@@ -230,7 +230,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walk",
-"speed": 20.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -272,7 +272,6 @@ script = ExtResource("1_36oe5")
 sprite_frames = SubResource("SpriteFrames_te6hp")
 animation = &"Walk"
 autoplay = "Walk"
-frame_progress = 0.7086041
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=263183677]
 shape = SubResource("RectangleShape2D_7c84j")

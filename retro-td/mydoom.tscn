@@ -232,3 +232,6 @@ sprite_frames = SubResource("SpriteFrames_ul4by")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D5" unique_id=1274802732]
 position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_te6hp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1749729009]
+rect = Rect2(-16, -15, 160, 30)
