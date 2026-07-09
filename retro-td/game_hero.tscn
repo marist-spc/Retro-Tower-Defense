@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d0cc5uv4ldwiy"]
+
+[ext_resource type="Texture2D" uid="uid://d4b1d17okne28" path="res://art/Tower Sprites/Game Hero Byte-1.png.png" id="1_q5reu"]
+[ext_resource type="Texture2D" uid="uid://b6o4avk8pmcpc" path="res://art/Tower Sprites/Game Hero Byte-5.png.png" id="2_ehl5v"]
+[ext_resource type="Texture2D" uid="uid://m8nx0khaaj6o" path="res://art/Tower Sprites/Game Hero Byte-6.png.png" id="3_l7o1u"]
+[ext_resource type="Texture2D" uid="uid://do1qb3uvl4qwg" path="res://art/Tower Sprites/Game Hero Byte-7.png.png" id="4_46hoe"]
+[ext_resource type="Texture2D" uid="uid://cs7gisl3q3wyh" path="res://art/Tower Sprites/Game Hero Byte-2.png.png" id="5_o6vnw"]
+[ext_resource type="Texture2D" uid="uid://crbvjuudto388" path="res://art/Tower Sprites/Game Hero Byte-3.png.png" id="6_ofrch"]
+[ext_resource type="Texture2D" uid="uid://c66k1msrrjt8e" path="res://art/Tower Sprites/Game Hero Byte-4.png.png" id="7_dv8rn"]
+[ext_resource type="Script" uid="uid://dlvqu5qk0mpbf" path="res://Tower.gd" id="8_1rdbw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q5reu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ehl5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l7o1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_46hoe")
+}],
+"loop": 1,
+"name": &"Upgrade Path 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q5reu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o6vnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ofrch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dv8rn")
+}],
+"loop": 1,
+"name": &"Upgrade Path 2",
+"speed": 5.0
+}]
+
+[node name="Game_Hero" type="AnimatedSprite2D" unique_id=1682854608]
+sprite_frames = SubResource("SpriteFrames_v4uss")
+animation = &"Upgrade Path 2"
+script = ExtResource("8_1rdbw")
+cost = 7500
+upgrade_costs = {
+"path1": [2000, 7500, 15000],
+"path2": [3000, 7000, 1200]
+}

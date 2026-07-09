@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ch16nic7g1gff"]
+
+[ext_resource type="Texture2D" uid="uid://cvdfh0c3a2bko" path="res://art/Tower Sprites/Anti Virus Knight-1.png.png" id="1_w1e8r"]
+[ext_resource type="Texture2D" uid="uid://xk285wnsuq3y" path="res://art/Tower Sprites/Anti Virus Knight-2.png.png" id="2_gpgoc"]
+[ext_resource type="Texture2D" uid="uid://bdwj1x6gai8b0" path="res://art/Tower Sprites/Anti Virus Knight-4.png.png" id="3_wg7bv"]
+[ext_resource type="Texture2D" uid="uid://cxdccvhc8sf7t" path="res://art/Tower Sprites/Anti Virus Knight-6.png.png" id="4_c0y6e"]
+[ext_resource type="Texture2D" uid="uid://2110er1r6oi8" path="res://art/Tower Sprites/Anti Virus Knight-3.png.png" id="5_o3pgf"]
+[ext_resource type="Texture2D" uid="uid://dgm2xh3j62brs" path="res://art/Tower Sprites/Anti Virus Knight-5.png.png" id="6_wux63"]
+[ext_resource type="Texture2D" uid="uid://bf657ak737t2i" path="res://art/Tower Sprites/Anti Virus Knight-7.png.png" id="7_2i5v2"]
+[ext_resource type="Script" uid="uid://dlvqu5qk0mpbf" path="res://Tower.gd" id="8_slljn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w1e8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gpgoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wg7bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c0y6e")
+}],
+"loop": 1,
+"name": &"Upgrade Path 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w1e8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o3pgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wux63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2i5v2")
+}],
+"loop": 1,
+"name": &"Upgrade Path 2",
+"speed": 5.0
+}]
+
+[node name="Antivirus Knight" type="AnimatedSprite2D" unique_id=1889110784]
+sprite_frames = SubResource("SpriteFrames_v4uss")
+animation = &"Upgrade Path 1"
+script = ExtResource("8_slljn")
+cost = 200
+upgrade_costs = {
+"path1": [1000, 3500, 15000],
+"path2": [1500, 2000, 5000]
+}

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://danvdvjsu11bd"]
+
+[ext_resource type="Texture2D" uid="uid://cxwspxwwl8r8u" path="res://art/Tower Sprites/Ad Blocker Byte-1.png.png" id="1_mjcps"]
+[ext_resource type="Texture2D" uid="uid://tmtpxxslyw67" path="res://art/Tower Sprites/Ad Blocker Byte-2.png.png" id="2_p77mg"]
+[ext_resource type="Texture2D" uid="uid://biyvhjn177lx7" path="res://art/Tower Sprites/Ad Blocker Byte-3.png.png" id="3_2p2vj"]
+[ext_resource type="Texture2D" uid="uid://ca6gryl03isk5" path="res://art/Tower Sprites/Ad Blocker Byte-4.png.png" id="4_t3ax5"]
+[ext_resource type="Texture2D" uid="uid://bmgrbn81d0cv4" path="res://art/Tower Sprites/Ad Blocker Byte-5.png.png" id="5_xi4a2"]
+[ext_resource type="Texture2D" uid="uid://hautliyhmejm" path="res://art/Tower Sprites/Ad Blocker Byte-6.png.png" id="6_bloj2"]
+[ext_resource type="Texture2D" uid="uid://dcffa6logjkso" path="res://art/Tower Sprites/Ad Blocker Byte-7.png.png" id="7_7ckoh"]
+[ext_resource type="Script" uid="uid://dlvqu5qk0mpbf" path="res://Tower.gd" id="8_jn1as"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mjcps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p77mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2p2vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t3ax5")
+}],
+"loop": 1,
+"name": &"Upgrade Path 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mjcps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xi4a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bloj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ckoh")
+}],
+"loop": 1,
+"name": &"Upgrade Path 2",
+"speed": 5.0
+}]
+
+[node name="Ad Blocker" type="AnimatedSprite2D" unique_id=1030474835]
+sprite_frames = SubResource("SpriteFrames_v4uss")
+animation = &"Upgrade Path 2"
+script = ExtResource("8_jn1as")
+upgrade_costs = {
+"path1": [500, 5000, 15000],
+"path2": [1000, 2500, 20000]
+}
