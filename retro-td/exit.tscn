@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://25065dqdpru6"]
+
+[ext_resource type="StyleBox" uid="uid://dhdgcb54wyt0b" path="res://transparent_box.tres" id="1_6sfst"]
+[ext_resource type="Script" uid="uid://cf5xjweijfq7w" path="res://exit.gd" id="1_24kvk"]
+
+[sub_resource type="Theme" id="Theme_g4v7s"]
+
+[node name="Exit" type="CanvasLayer" unique_id=879292014]
+script = ExtResource("1_24kvk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=481886343]
+offset_left = -11.0
+offset_top = -2.0
+offset_right = 1050.0
+offset_bottom = 1061.0
+theme = SubResource("Theme_g4v7s")
+color = Color(1, 1, 1, 0.31764707)
+
+[node name="question" type="Label" parent="." unique_id=67289835]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -11.5
+offset_right = 117.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "are you sure you want to quit?"
+
+[node name="Yesbutton" type="Button" parent="." unique_id=1659007097]
+anchors_preset = -1
+anchor_right = 0.093
+anchor_bottom = 0.049000002
+offset_left = 198.0
+offset_top = 590.0
+offset_right = 250.0
+offset_bottom = 640.0
+theme_override_styles/normal = ExtResource("1_6sfst")
+
+[node name="yes" type="Label" parent="Yesbutton" unique_id=610727144]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.5
+offset_top = -94.0
+offset_right = 56.5
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "YES"
+
+[node name="NoButton" type="Button" parent="." unique_id=30931449]
+offset_left = 579.0
+offset_top = 605.0
+offset_right = 683.0
+offset_bottom = 678.0
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_styles/normal = ExtResource("1_6sfst")
+
+[node name="no" type="Label" parent="NoButton" unique_id=801315621]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -8.0
+offset_right = 462.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 64
+text = "NO"
+
+[connection signal="pressed" from="Yesbutton" to="." method="_on_yesbutton_pressed"]
+[connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]

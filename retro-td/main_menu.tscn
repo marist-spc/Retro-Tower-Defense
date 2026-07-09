@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://6a0vbw1e47ys" path="res://firewall.png" id="2_glbon"]
 [ext_resource type="Texture2D" uid="uid://bjtfbxw5362ed" path="res://windows.png" id="3_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://ceo5uxuyvm01j" path="res://motherboard.png" id="4_qe12f"]
+[ext_resource type="Texture2D" uid="uid://p6ssgf518jnn" path="res://ninja.png" id="6_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://bbuioh71nexrl" path="res://ram.png" id="7_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://cnonpweip6ulb" path="res://Knight.png" id="8_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://q8plgdo7egmy" path="res://art/green/green-walk.png-2.png.png" id="9_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://cxq8jrugy0bou" path="res://art/blue/blue-walk1.png" id="10_0k4wn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qtwp"]
 texture = ExtResource("1_jix8l")
@@ -117,6 +122,35 @@ offset_bottom = 832.0
 position = Vector2(64, 64)
 scale = Vector2(0.1292929, 0.12903227)
 texture = ExtResource("2_glbon")
+
+[node name="ninja" type="Sprite2D" parent="." unique_id=654358632]
+position = Vector2(299.99994, 401)
+rotation = -0.40666172
+scale = Vector2(0.41949153, 0.46363637)
+texture = ExtResource("6_8qtwp")
+
+[node name="ram" type="Sprite2D" parent="." unique_id=883469060]
+position = Vector2(727.00006, 406.00006)
+rotation = 0.40666175
+scale = Vector2(0.6589403, 0.7235772)
+texture = ExtResource("7_dy7ct")
+
+[node name="knight" type="Sprite2D" parent="." unique_id=994134941]
+position = Vector2(507, 350.00003)
+scale = Vector2(1.2732558, 1.4753522)
+texture = ExtResource("8_0o4t1")
+
+[node name="green" type="Sprite2D" parent="." unique_id=1126136435]
+position = Vector2(327, 251)
+rotation = 0.3159046
+scale = Vector2(2.875, 2.59375)
+texture = ExtResource("9_0o4t1")
+
+[node name="blue" type="Sprite2D" parent="." unique_id=353680985]
+position = Vector2(716, 246.99997)
+rotation = -0.29670596
+scale = Vector2(3.03125, 3.125)
+texture = ExtResource("10_0k4wn")
 
 [connection signal="pressed" from="CanvasLayer/MotherboardButton" to="." method="_on_motherboard_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/WindowsButton" to="." method="_on_windows_button_pressed"]
