@@ -175,61 +175,61 @@ size = Vector2(32, 29)
 
 [node name="Mydoom" type="CharacterBody2D" unique_id=1818329966]
 
-[node name="Node2D" type="Area2D" parent="." unique_id=67388640]
+[node name="head" type="Area2D" parent="." unique_id=67388640]
 position = Vector2(128, 0)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D" unique_id=2059761101]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="head" unique_id=2059761101]
 sprite_frames = SubResource("SpriteFrames_te6hp")
 animation = &"headGo"
 autoplay = "shrink"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D" unique_id=717983921]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head" unique_id=717983921]
 shape = SubResource("RectangleShape2D_33iqn")
 
-[node name="Node2D2" type="Area2D" parent="." unique_id=1952169377]
+[node name="segment1" type="Area2D" parent="." unique_id=1952169377]
 position = Vector2(128, 0)
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D2" unique_id=1251578329]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="segment1" unique_id=1251578329]
 position = Vector2(-32, 0)
 sprite_frames = SubResource("SpriteFrames_vwy3l")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2" unique_id=1336631838]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="segment1" unique_id=1336631838]
 position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_w4wr1")
 
-[node name="Node2D3" type="Area2D" parent="." unique_id=1508517808]
+[node name="segment2" type="Area2D" parent="." unique_id=1508517808]
 position = Vector2(128, 0)
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Node2D3" unique_id=658278123]
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="segment2" unique_id=658278123]
 position = Vector2(-64, 0)
 sprite_frames = SubResource("SpriteFrames_487rn")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D3" unique_id=586764893]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="segment2" unique_id=586764893]
 position = Vector2(-64, 0)
 shape = SubResource("RectangleShape2D_4qg3j")
 
-[node name="Node2D4" type="Area2D" parent="." unique_id=1951486406]
+[node name="segment3" type="Area2D" parent="." unique_id=1951486406]
 position = Vector2(128, 0)
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D4" unique_id=954039389]
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="segment3" unique_id=954039389]
 position = Vector2(-96, 0)
 sprite_frames = SubResource("SpriteFrames_kiq32")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D4" unique_id=358731562]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="segment3" unique_id=358731562]
 position = Vector2(-96, 0)
 shape = SubResource("RectangleShape2D_7c84j")
 
-[node name="Node2D5" type="Area2D" parent="." unique_id=1514181168]
+[node name="tail" type="Area2D" parent="." unique_id=1514181168]
 position = Vector2(32, 0)
 
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Node2D5" unique_id=1157415634]
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="tail" unique_id=1157415634]
 position = Vector2(-32, 0)
 sprite_frames = SubResource("SpriteFrames_ul4by")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D5" unique_id=1274802732]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tail" unique_id=1274802732]
 position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_te6hp")
 

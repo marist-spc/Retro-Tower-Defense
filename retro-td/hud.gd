@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @export var cryptoScreen: Label
 @export var securityScreen: Label
+@export var nextWaveButton: Button
 
 var current_score = 500
 var security=100
