@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="2_8rlo4"]
 [ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="3_n74np"]
 [ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="4_w2jd0"]
+[ext_resource type="PackedScene" uid="uid://jke17f54lhqf" path="res://next_wave.tscn" id="5_lnoga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rlo4"]
 texture = ExtResource("1_ts5x4")
@@ -66,5 +67,8 @@ position = Vector2(987.99994, 143)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1329883378]
 
+[node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("5_lnoga")]
+
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]

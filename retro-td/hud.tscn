@@ -10,14 +10,6 @@ loop_end = 1041000
 mix_rate = 48000
 stereo = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te6hp"]
-bg_color = Color(1, 0, 0.6901961, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.6745098, 0, 1, 1)
-
 [node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen")]
 script = ExtResource("1_37p78")
 cryptoScreen = NodePath("Crypto")
@@ -42,24 +34,3 @@ text = "Security: 100"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=401429548]
 stream = SubResource("AudioStreamWAV_37p78")
 autoplay = true
-
-[node name="Button" type="Button" parent="." unique_id=1913366517]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -237.0
-offset_top = 41.0
-offset_right = -51.0
-offset_bottom = 110.0
-grow_horizontal = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 0, 0.6, 1)
-theme_override_colors/icon_focus_color = Color(1, 0, 0.6, 1)
-theme_override_colors/icon_pressed_color = Color(1, 0, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 0, 0.8, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0.8, 1)
-theme_override_font_sizes/font_size = 33
-theme_override_styles/normal = SubResource("StyleBoxFlat_te6hp")
-action_mode = 0
-button_mask = 3
-text = "Next Wave"

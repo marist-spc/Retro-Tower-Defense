@@ -62,3 +62,7 @@ func _on_spawn_timer_timeout():
 			WhichWave=waves.pop_front()
 	#else:
 	#	WhichWave=waves.pop_front()
+
+
+func _on_next_wave_pressed() -> void:
+	pass

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="4_kha8f"]
 [ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_gcfbm"]
 [ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="6_gcfbm"]
+[ext_resource type="PackedScene" uid="uid://jke17f54lhqf" path="res://next_wave.tscn" id="7_nnegc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsii"]
 texture = ExtResource("1_664hb")
@@ -66,5 +67,8 @@ script = ExtResource("5_gcfbm")
 [node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("6_gcfbm")]
 position = Vector2(988, 532)
 
+[node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("7_nnegc")]
+
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
+[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
