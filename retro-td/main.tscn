@@ -48,6 +48,10 @@ rotation = 1.5686346
 [node name="SpawnTimer" type="Timer" parent="." unique_id=2072539767]
 
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("5_lquwl")]
+offset_left = 790.0
+offset_top = 26.0
+offset_right = 976.0
+offset_bottom = 95.0
 
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]

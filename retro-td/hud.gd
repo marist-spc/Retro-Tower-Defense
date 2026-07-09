@@ -9,7 +9,7 @@ var security=100
 func add_points(amount: int):
 	current_score += amount
 	
-	cryptoScreen.text="Crypto: "
+	cryptoScreen.text="Crypto: "+str(current_score)
 	
 var amount = 1
 
@@ -18,4 +18,4 @@ func _on_endpoint_body_entered(body: Node2D) -> void:
 	security-=body.health
 	
 	
-	securityScreen.text="Security: "
+	securityScreen.text="Security: "+ str(security)

@@ -68,6 +68,8 @@ position = Vector2(987.99994, 143)
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1329883378]
 
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("5_lnoga")]
+offset_left = 786.0
+offset_right = 972.0
 
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]

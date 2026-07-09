@@ -68,6 +68,10 @@ script = ExtResource("5_gcfbm")
 position = Vector2(988, 532)
 
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("7_nnegc")]
+offset_left = 798.0
+offset_top = 30.0
+offset_right = 984.0
+offset_bottom = 99.0
 
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
