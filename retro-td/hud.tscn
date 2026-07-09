@@ -18,11 +18,10 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.6745098, 0, 1, 1)
 
-[node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen", "nextWaveButton")]
+[node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen")]
 script = ExtResource("1_37p78")
 cryptoScreen = NodePath("Crypto")
 securityScreen = NodePath("Health")
-nextWaveButton = NodePath("Button")
 
 [node name="Crypto" type="Label" parent="." unique_id=709436791]
 offset_right = 40.0
