@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ptj8npe25q8k"]
+
+[ext_resource type="Script" path="res://wave_list.gd" id="1_d45qv"]
+[ext_resource type="PackedScene" uid="uid://bsmqw6ufb4tnn" path="res://virus.tscn" id="2_xnm0u"]
+[ext_resource type="PackedScene" uid="uid://cja38cnaakely" path="res://spam_email_boss.tscn" id="3_xnm0u"]
+[ext_resource type="PackedScene" uid="uid://cathsy2wje63k" path="res://poppup.tscn" id="4_s5wot"]
+[ext_resource type="PackedScene" path="res://mydoom.tscn" id="5_iag0o"]
+
+[node name="WaveList" type="Node2D" unique_id=2102804863]
+script = ExtResource("1_d45qv")
+virusProtoype = ExtResource("2_xnm0u")
+SpamEmail = ExtResource("3_xnm0u")
+Poppup = ExtResource("4_s5wot")
+MyDoom = ExtResource("5_iag0o")
+
+[node name="Label" type="Label" parent="." unique_id=1180402898]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 847.0
+offset_top = 119.0
+offset_right = 974.0
+offset_bottom = 166.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 34
+text = "Wave: 0"

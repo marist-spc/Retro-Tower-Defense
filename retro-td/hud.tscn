@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://cx0m8xjqnvq8x"]
 
-[ext_resource type="Script" uid="uid://bp8p2oook3iot" path="res://hud.gd" id="1_d4yu0"]
+[ext_resource type="Script" uid="uid://bp8p2oook3iot" path="res://hud.gd" id="1_37p78"]
 [ext_resource type="StyleBox" uid="uid://dhdgcb54wyt0b" path="res://transparent_box.tres" id="2_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://bsng7rg3drqki" path="res://Tower_Dropout.png" id="2_64ctp"]
+[ext_resource type="FontFile" path="res://art/PressStart2P-Regular.ttf" id="3_1xsix"]
 [ext_resource type="AudioStream" uid="uid://u16yvtgmqhag" path="res://art/back_001.ogg" id="4_640wx"]
 [ext_resource type="AudioStream" uid="uid://tolcgun887po" path="res://maximize_002.ogg" id="5_a2258"]
 
@@ -26,7 +27,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_8sq4i")
 
 [node name="Hud" type="CanvasLayer" unique_id=1658330229]
-script = ExtResource("1_d4yu0")
+script = ExtResource("1_37p78")
 
 [node name="Button" type="Button" parent="." unique_id=1791014824]
 offset_top = 176.0
@@ -44,19 +45,25 @@ text = "Back to
 main menu"
 
 [node name="Crypto" type="Label" parent="." unique_id=709436791]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 366.0
+offset_bottom = 41.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
+theme_override_colors/font_outline_color = Color(0.6745098, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_1xsix")
 theme_override_font_sizes/font_size = 32
-text = "Crypto:"
+text = "Crypto: 500"
 
 [node name="Health" type="Label" parent="." unique_id=1281946856]
-offset_top = 48.0
-offset_right = 134.0
-offset_bottom = 93.0
+offset_left = 14.0
+offset_top = 53.0
+offset_right = 430.0
+offset_bottom = 85.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
+theme_override_colors/font_outline_color = Color(0.6745098, 0, 1, 1)
 theme_override_font_sizes/font_size = 32
-text = "Security:"
+text = "Security: 100"
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=401429548]
 stream = SubResource("AudioStreamWAV_37p78")

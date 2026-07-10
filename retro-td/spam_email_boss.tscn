@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cja38cnaakely"]
+
+[ext_resource type="Texture2D" uid="uid://boatd3lt4ubd6" path="res://art/Spam Email/SpamEmail-3.png.png" id="1_7nibp"]
+[ext_resource type="Script" path="res://spam_email_boss.gd" id="1_pmy1g"]
+[ext_resource type="Texture2D" uid="uid://bej263414c4es" path="res://art/Boss Death/boss-death-1.png.png" id="2_pmy1g"]
+[ext_resource type="Texture2D" uid="uid://dvw4e08h7m1r2" path="res://art/Boss Death/boss-death-2.png.png" id="3_yn3qq"]
+[ext_resource type="Texture2D" uid="uid://cinq7lfccv0sk" path="res://art/Boss Death/boss-death-3.png.png" id="4_2vbeg"]
+[ext_resource type="Texture2D" uid="uid://cuij56gvqfofq" path="res://art/Boss Death/boss-death-4.png.png" id="5_f1sea"]
+[ext_resource type="Texture2D" path="res://art/Boss Death/boss-death-5.png.png" id="6_e8l7m"]
+[ext_resource type="Texture2D" path="res://art/Boss Death/boss-death-6.png.png" id="7_f3cts"]
+[ext_resource type="Texture2D" path="res://art/Boss Death/boss-death-7.png.png" id="8_fb0s4"]
+[ext_resource type="Texture2D" uid="uid://bnnt2twx6rqwu" path="res://art/Spam Email/SpamEmail-1.png.png" id="9_rakwy"]
+[ext_resource type="Texture2D" uid="uid://b1fi8gtvtcwxi" path="res://art/Spam Email/SpamEmail-2.png.png" id="10_2nnsi"]
+[ext_resource type="Texture2D" uid="uid://dtnih151u886h" path="res://art/Spam Email/SpamEmail-4.png.png" id="11_rp26w"]
+[ext_resource type="Texture2D" uid="uid://4nv6yussu0sa" path="res://art/Spam Email/SpamEmail-5.png.png" id="12_6x108"]
+[ext_resource type="Texture2D" uid="uid://0fo4bxl4oltu" path="res://art/Spam Email/SpamEmail-6.png.png" id="13_n8r7d"]
+[ext_resource type="Texture2D" uid="uid://ds4enjhkgb0k1" path="res://art/Spam Email/SpamEmail-7.png.png" id="14_cjr0c"]
+[ext_resource type="Texture2D" uid="uid://b7ybxefml86s4" path="res://art/Spam Email/SpamEmail-8.png.png" id="15_g86ov"]
+[ext_resource type="Texture2D" uid="uid://1g4ceectuft" path="res://art/Spam Email/SpamEmail-9.png.png" id="16_cowc3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te6hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7nibp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pmy1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yn3qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2vbeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f1sea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e8l7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f3cts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fb0s4")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rakwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2nnsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7nibp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rp26w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6x108")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n8r7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cjr0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g86ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cowc3")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qg3j"]
+size = Vector2(28, 23)
+
+[node name="SpamEmailBoss" type="CharacterBody2D" unique_id=527869565]
+collision_layer = 2
+script = ExtResource("1_pmy1g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299907383]
+sprite_frames = SubResource("SpriteFrames_te6hp")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=93440480]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_4qg3j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=732130682]
+rect = Rect2(-14, -13, 28, 23)
