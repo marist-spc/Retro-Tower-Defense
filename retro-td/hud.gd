@@ -29,7 +29,8 @@ func _on_endpoint_body_entered(body: Node2D) -> void:
 	securityScreen.text="Security: "+ str(security)
 	
 	body.queue_free()
-	
+	if security<0:
+		security=0
 
 func death():
 	if security<=0:

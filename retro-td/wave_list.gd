@@ -115,7 +115,11 @@ func _on_spawn_timer_timeout():
 		mydoomGo.path=pathAssign
 		add_child(mydoomGo)
 		waveFinished=true
-	
+	#elif (waveNum==1)&&waveFinished==false:
+		#var mydoomGo=MyDoom.instantiate()
+		#mydoomGo.path=pathAssign
+		#add_child(mydoomGo)
+		#waveFinished=true
 	
 
 
