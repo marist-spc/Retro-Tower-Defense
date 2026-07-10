@@ -26,12 +26,12 @@ func _on_endpoint_body_entered(body: Node2D) -> void:
 	securityScreen.text="Security: "+ str(security)
 	
 	body.queue_free()
-	
+	death()
 
 func death():
 	if security<=0:
 		stopTimer.emit()
-
+		get_parent().get_node("Death").show()
 
 func _on_button_pressed():
 	$Back_menu.play()

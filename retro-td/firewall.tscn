@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ddjgwat3ethkc" path="res://tower_select.tscn" id="7_664hb"]
 [ext_resource type="PackedScene" uid="uid://cm2rk3kxcfy8s" path="res://next_wave.tscn" id="7_nnegc"]
 [ext_resource type="PackedScene" uid="uid://25065dqdpru6" path="res://exit.tscn" id="8_gdbu5"]
+[ext_resource type="PackedScene" uid="uid://cbvqpdsx2iifo" path="res://death.tscn" id="13_1ajd8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsii"]
 texture = ExtResource("1_664hb")
@@ -107,6 +108,9 @@ texture = ExtResource("5_nnegc")
 visible = false
 
 [node name="Exit" parent="." unique_id=879292014 instance=ExtResource("8_gdbu5")]
+visible = false
+
+[node name="Death" parent="." unique_id=780036287 instance=ExtResource("13_1ajd8")]
 visible = false
 
 [connection signal="stopTimer" from="Hud" to="SpawnTimer2" method="_on_hud_stop_timer"]

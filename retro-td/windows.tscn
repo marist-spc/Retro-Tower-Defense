@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="6_mkbnd"]
 [ext_resource type="PackedScene" uid="uid://cm2rk3kxcfy8s" path="res://next_wave.tscn" id="7_bgkig"]
 [ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="8_c5jdp"]
+[ext_resource type="PackedScene" uid="uid://cbvqpdsx2iifo" path="res://death.tscn" id="9_mkbnd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_22j4m")
@@ -63,6 +64,9 @@ rotation = 1.5686346
 [node name="SpawnTimer2" type="Timer" parent="." unique_id=1274522232]
 autostart = true
 script = ExtResource("6_mkbnd")
+
+[node name="Death" parent="." unique_id=780036287 instance=ExtResource("9_mkbnd")]
+visible = false
 
 [connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
