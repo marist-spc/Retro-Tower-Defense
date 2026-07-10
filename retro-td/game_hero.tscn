@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_46hoe")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -48,7 +48,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_5r1wv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1 Bullets",
 "speed": 5.0
 }, {
@@ -65,9 +65,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_dv8rn")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -82,14 +82,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_k4kta")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2 Bullets",
 "speed": 5.0
 }]
 
 [node name="Game_Hero" type="AnimatedSprite2D" unique_id=1682854608]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Upgrade Path 2 Bullets"
+animation = &"Upgrade Path 1"
 script = ExtResource("8_1rdbw")
 cost = 7500
 upgrade_costs = {

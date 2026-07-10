@@ -41,7 +41,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_t3ax5")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -58,14 +58,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_7ckoh")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
 "speed": 5.0
 }]
 
 [node name="Ad Blocker" type="AnimatedSprite2D" unique_id=1030474835]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Block Bullets"
+animation = &"Upgrade Path 1"
 script = ExtResource("8_jn1as")
 upgrade_costs = {
 "path1": [500, 5000, 15000],

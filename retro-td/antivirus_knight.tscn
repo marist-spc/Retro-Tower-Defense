@@ -18,7 +18,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_c0y6e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Knight Shockwave",
 "speed": 5.0
 }, {
@@ -34,12 +34,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_c0y6e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Knight Sword throw better",
 "speed": 5.0
 }, {
 "frames": [],
-"loop": 1,
+"loop": 0,
 "name": &"Knight slash",
 "speed": 5.0
 }, {
@@ -56,7 +56,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_c0y6e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -73,14 +73,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_2i5v2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
 "speed": 5.0
 }]
 
 [node name="Antivirus Knight" type="AnimatedSprite2D" unique_id=1889110784]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Knight Shockwave"
+animation = &"Upgrade Path 2"
 script = ExtResource("8_slljn")
 cost = 200
 upgrade_costs = {

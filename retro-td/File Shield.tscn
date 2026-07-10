@@ -17,7 +17,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_v58my")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"File Shield Shockwave",
 "speed": 5.0
 }, {
@@ -42,7 +42,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_t01y4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -59,14 +59,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_whi3e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
 "speed": 5.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1393827248]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"File Shield Shockwave"
+animation = &"Upgrade Path 1"
 script = ExtResource("8_u2e5e")
 cost = 400
 upgrade_costs = {
