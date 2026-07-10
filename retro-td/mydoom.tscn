@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://djcp4ctddnlf5"]
+[gd_scene format=3 uid="uid://1ibxqcr36mqf"]
 
 [ext_resource type="Texture2D" uid="uid://bpqov253g1jnq" path="res://art/MyDoom/head/MyDoom-head-1.png.png" id="1_0dbrs"]
 [ext_resource type="Script" uid="uid://bkk27yov8igl" path="res://mydoom.gd" id="1_wudhj"]

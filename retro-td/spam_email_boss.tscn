@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cgs5cotxkn1hu"]
+[gd_scene format=3 uid="uid://cja38cnaakely"]
 
 [ext_resource type="Texture2D" uid="uid://boatd3lt4ubd6" path="res://art/Spam Email/SpamEmail-3.png.png" id="1_7nibp"]
 [ext_resource type="Script" uid="uid://dwg8nddycxv5f" path="res://spam_email_boss.gd" id="1_pmy1g"]
