@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cj7b2sgg7hkeo"]
+[gd_scene format=3 uid="uid://cathsy2wje63k"]
 
 [ext_resource type="Script" uid="uid://ckvd6kookgyh1" path="res://poppup.gd" id="1_36oe5"]
 [ext_resource type="Texture2D" uid="uid://vs54o4y4wdle" path="res://art/Poppup/Poppup-1.png.png" id="1_wjpcn"]

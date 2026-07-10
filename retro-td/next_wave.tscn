@@ -1,6 +1,8 @@
-[gd_scene format=3 uid="uid://jke17f54lhqf"]
+[gd_scene format=3 uid="uid://cm2rk3kxcfy8s"]
 
 [ext_resource type="FontFile" uid="uid://bxp4l0yjwgu61" path="res://art/PressStart2P-Regular.ttf" id="1_b6ct4"]
+[ext_resource type="Script" uid="uid://c7sb5n2v68d34" path="res://next_wave.gd" id="2_ibos5"]
+[ext_resource type="AudioStream" uid="uid://b7hiipgxouumq" path="res://switch38.ogg" id="3_rrok6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te6hp"]
 bg_color = Color(1, 0, 0.6901961, 1)
@@ -31,3 +33,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_te6hp")
 action_mode = 0
 button_mask = 3
 text = "Next Wave"
+script = ExtResource("2_ibos5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=745393991]
+stream = ExtResource("3_rrok6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
