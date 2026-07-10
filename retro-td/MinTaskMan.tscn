@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://blfgw4iefde0v"]
 
 [ext_resource type="Texture2D" uid="uid://botty8gsqlwmp" path="res://art/Tower Sprites/Mini TaskManager Byte-1.png.png" id="1_2gc0c"]
+[ext_resource type="Texture2D" uid="uid://iw7npyi41fwm" path="res://art/Tower Sprites/TaskManagerZapGun.png" id="1_dpv55"]
 [ext_resource type="Texture2D" uid="uid://dxl17lan4qcfh" path="res://art/Tower Sprites/Mini TaskManager Byte-3.png.png" id="2_dpv55"]
 [ext_resource type="Texture2D" uid="uid://bn3ra3x37vms" path="res://art/Tower Sprites/Mini TaskManager Byte-4.png.png" id="3_rcm8j"]
 [ext_resource type="Texture2D" uid="uid://nf1dbqdhe24b" path="res://art/Tower Sprites/Mini TaskManager Byte-5.png.png" id="4_p0ut2"]
@@ -10,6 +11,14 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dpv55")
+}],
+"loop": 1,
+"name": &"MTM Bullets",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_2gc0c")
@@ -44,6 +53,6 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=463841486]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Upgrade Path 1"
+animation = &"MTM Bullets"
 script = ExtResource("7_824dr")
 cost = 1000

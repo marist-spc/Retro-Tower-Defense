@@ -4,10 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://b6o4avk8pmcpc" path="res://art/Tower Sprites/Game Hero Byte-5.png.png" id="2_ehl5v"]
 [ext_resource type="Texture2D" uid="uid://m8nx0khaaj6o" path="res://art/Tower Sprites/Game Hero Byte-6.png.png" id="3_l7o1u"]
 [ext_resource type="Texture2D" uid="uid://do1qb3uvl4qwg" path="res://art/Tower Sprites/Game Hero Byte-7.png.png" id="4_46hoe"]
+[ext_resource type="Texture2D" uid="uid://b8bunr75l66lb" path="res://art/Tower Sprites/SlingShotBullet.png" id="5_1rdbw"]
 [ext_resource type="Texture2D" uid="uid://cs7gisl3q3wyh" path="res://art/Tower Sprites/Game Hero Byte-2.png.png" id="5_o6vnw"]
 [ext_resource type="Texture2D" uid="uid://crbvjuudto388" path="res://art/Tower Sprites/Game Hero Byte-3.png.png" id="6_ofrch"]
+[ext_resource type="Texture2D" uid="uid://cpq5ye1ljiyt3" path="res://art/Tower Sprites/SniperBullet.png" id="6_yg1ov"]
 [ext_resource type="Texture2D" uid="uid://c66k1msrrjt8e" path="res://art/Tower Sprites/Game Hero Byte-4.png.png" id="7_dv8rn"]
+[ext_resource type="Texture2D" uid="uid://dki4pk5s0utx5" path="res://art/Tower Sprites/Star.png" id="7_jbayf"]
 [ext_resource type="Script" uid="uid://dlvqu5qk0mpbf" path="res://Tower.gd" id="8_1rdbw"]
+[ext_resource type="Texture2D" uid="uid://vvjtb3k8y2ea" path="res://art/Tower Sprites/BiggerStar.png" id="8_5r1wv"]
+[ext_resource type="Texture2D" uid="uid://w5hbgxleu82k" path="res://art/Tower Sprites/FireBall.png" id="12_ppg73"]
+[ext_resource type="Texture2D" uid="uid://cx8pn8cb4k5pj" path="res://art/Tower Sprites/HalfRedHalfBuleFireball.png" id="13_qoqul"]
+[ext_resource type="Texture2D" uid="uid://c5o25syoqny5o" path="res://art/Tower Sprites/ImaginaryTechniqueHollowFireball.png" id="14_k4kta"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
 animations = [{
@@ -30,6 +37,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_1rdbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yg1ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jbayf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5r1wv")
+}],
+"loop": 1,
+"name": &"Upgrade Path 1 Bullets",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_q5reu")
 }, {
 "duration": 1.0,
@@ -44,11 +68,28 @@ animations = [{
 "loop": 1,
 "name": &"Upgrade Path 2",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1rdbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ppg73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qoqul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k4kta")
+}],
+"loop": 1,
+"name": &"Upgrade Path 2 Bullets",
+"speed": 5.0
 }]
 
 [node name="Game_Hero" type="AnimatedSprite2D" unique_id=1682854608]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Upgrade Path 2"
+animation = &"Upgrade Path 2 Bullets"
 script = ExtResource("8_1rdbw")
 cost = 7500
 upgrade_costs = {

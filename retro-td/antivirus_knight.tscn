@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ch16nic7g1gff"]
 
+[ext_resource type="Texture2D" uid="uid://xrinrqyrdhry" path="res://art/Tower Sprites/ShockWave.png" id="1_c0y6e"]
 [ext_resource type="Texture2D" uid="uid://cvdfh0c3a2bko" path="res://art/Tower Sprites/Anti Virus Knight-1.png.png" id="1_w1e8r"]
+[ext_resource type="Texture2D" uid="uid://bgfdd3njcqxoe" path="res://art/Tower Sprites/Sword.png" id="1_wg7bv"]
+[ext_resource type="Texture2D" uid="uid://d0aq8ywlvapvm" path="res://art/Tower Sprites/BlackSwrd.png" id="2_c0y6e"]
 [ext_resource type="Texture2D" uid="uid://xk285wnsuq3y" path="res://art/Tower Sprites/Anti Virus Knight-2.png.png" id="2_gpgoc"]
 [ext_resource type="Texture2D" uid="uid://bdwj1x6gai8b0" path="res://art/Tower Sprites/Anti Virus Knight-4.png.png" id="3_wg7bv"]
 [ext_resource type="Texture2D" uid="uid://cxdccvhc8sf7t" path="res://art/Tower Sprites/Anti Virus Knight-6.png.png" id="4_c0y6e"]
@@ -11,6 +14,35 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c0y6e")
+}],
+"loop": 1,
+"name": &"Knight Shockwave",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wg7bv")
+}],
+"loop": 0,
+"name": &"Knight Sword throw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c0y6e")
+}],
+"loop": 1,
+"name": &"Knight Sword throw better",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Knight slash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_w1e8r")
@@ -48,7 +80,7 @@ animations = [{
 
 [node name="Antivirus Knight" type="AnimatedSprite2D" unique_id=1889110784]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Upgrade Path 1"
+animation = &"Knight Shockwave"
 script = ExtResource("8_slljn")
 cost = 200
 upgrade_costs = {
