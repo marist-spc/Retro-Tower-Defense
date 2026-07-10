@@ -125,7 +125,7 @@ func _on_spawn_timer_timeout():
 
 func _on_next_wave_pressed() -> void:
 	
-	if waveFinished==true:
+	if waveFinished==true and waveNum<60:
 		waveNum+=1
 		$Label.text="Wave: "+str(waveNum)
 		WhichWave=waves.pop_front()
