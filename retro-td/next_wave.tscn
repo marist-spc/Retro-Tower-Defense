@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cm2rk3kxcfy8s"]
+
+[ext_resource type="FontFile" uid="uid://bxp4l0yjwgu61" path="res://art/PressStart2P-Regular.ttf" id="1_b6ct4"]
+[ext_resource type="Script" uid="uid://c7sb5n2v68d34" path="res://next_wave.gd" id="2_ibos5"]
+[ext_resource type="AudioStream" uid="uid://b7hiipgxouumq" path="res://switch38.ogg" id="3_rrok6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te6hp"]
+bg_color = Color(1, 0, 0.6901961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.6745098, 0, 1, 1)
+
+[node name="NextWave" type="Button" unique_id=1265753935]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -467.0
+offset_top = 15.0
+offset_right = -205.0
+offset_bottom = 84.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0, 0.6, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0.6, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0.8, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0.8, 1)
+theme_override_fonts/font = ExtResource("1_b6ct4")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_te6hp")
+action_mode = 0
+button_mask = 3
+text = "Next Wave"
+script = ExtResource("2_ibos5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=745393991]
+stream = ExtResource("3_rrok6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

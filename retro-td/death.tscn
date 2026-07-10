@@ -1,0 +1,345 @@
+[gd_scene format=4 uid="uid://cbvqpdsx2iifo"]
+
+[ext_resource type="Script" uid="uid://jndbij60rxyo" path="res://death.gd" id="1_qemge"]
+[ext_resource type="Texture2D" uid="uid://dope3w0w2exgh" path="res://!.png" id="2_lf77f"]
+[ext_resource type="Texture2D" uid="uid://bj7fnohryrpl1" path="res://pixelated-x.png" id="3_531me"]
+[ext_resource type="AudioStream" uid="uid://deenmfb3eindd" path="res://scratch_001.ogg" id="4_r6ms4"]
+[ext_resource type="AudioStream" uid="uid://dfyjj8xjwemdp" path="res://scratch_002.ogg" id="5_jxpam"]
+[ext_resource type="AudioStream" uid="uid://cor8dyrs8e1ew" path="res://scratch_003.ogg" id="6_idukc"]
+[ext_resource type="AudioStream" uid="uid://bk0fiuufckymj" path="res://scratch_004.ogg" id="7_ktdw2"]
+[ext_resource type="AudioStream" uid="uid://4v2ch4ucicxm" path="res://scratch_005.ogg" id="8_0oy2w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_531me"]
+texture = ExtResource("2_lf77f")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xgg8w"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_531me")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_57qmd"]
+bg_color = Color(0, 0, 0, 0.47058824)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4868a"]
+texture = ExtResource("3_531me")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yf5fn"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_4868a")
+
+[node name="Death" type="CanvasLayer" unique_id=780036287]
+script = ExtResource("1_qemge")
+
+[node name="BackGround" type="ColorRect" parent="." unique_id=356973609]
+offset_left = -200.0
+offset_top = -64.0
+offset_right = 1160.0
+offset_bottom = 1064.0
+color = Color(1, 0, 0, 0.47058824)
+
+[node name="error" type="ColorRect" parent="." unique_id=896835836]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="lost" type="Label" parent="error" unique_id=1217477744]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -110.0
+offset_right = 69.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.5116247, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "VIRUS DETECTED"
+
+[node name="!" type="TileMapLayer" parent="error" unique_id=2011586259]
+z_index = 1
+position = Vector2(-150, -250)
+tile_map_data = PackedByteArray("AAAOAAkAAAAAAAAAAAAPAAkAAAABAAAAAAAQAAoAAAABAAAAAAARAAsAAAABAAAAAAASAAwAAAABAAAAAAATAA0AAAABAAAAAAAUAA4AAAABAAAAAAAVAA8AAAABAAAAAAAWABAAAAABAAAAAAAXABEAAAABAAEAAAANAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAGABEAAAACAAEAAAAWABEAAAACAAAAAAAVABEAAAACAAAAAAAUABEAAAACAAAAAAATABEAAAACAAAAAAASABEAAAACAAAAAAARABEAAAACAAAAAAAQABEAAAACAAAAAAAPABEAAAACAAAAAAAOABEAAAACAAAAAAANABEAAAACAAAAAAAMABEAAAACAAAAAAALABEAAAACAAAAAAAKABEAAAACAAAAAAAJABEAAAACAAAAAAAIABEAAAACAAAAAAAHABEAAAACAAAAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAPAA8AAAAAAAEAAAAOAA8AAAAAAAEAAAAOAA0AAAAAAAEAAAAPAA0AAAAAAAEAAAAPAAwAAAAAAAEAAAAOAAwAAAAAAAEAAAAOAAsAAAAAAAEAAAAPAAsAAAAAAAEAAAAOAAoAAAACAAAAAAAPAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_xgg8w")
+
+[node name="Button" type="Button" parent="error" unique_id=1945352666]
+z_index = 4
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_57qmd")
+
+[node name="x" type="TileMapLayer" parent="error/Button" unique_id=405480047]
+position = Vector2(-160, -256)
+tile_map_data = PackedByteArray("AAAFAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="error2" type="ColorRect" parent="." unique_id=1798728988]
+visible = false
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -228.0
+offset_right = 376.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="lost2" type="Label" parent="error2" unique_id=109072145]
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -110.0
+offset_right = 69.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.5116247, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "VIRUS DETECTED"
+
+[node name="!2" type="TileMapLayer" parent="error2" unique_id=1521652697]
+z_index = 10
+position = Vector2(-150, -250)
+tile_map_data = PackedByteArray("AAAOAAkAAAAAAAAAAAAPAAkAAAABAAAAAAAQAAoAAAABAAAAAAARAAsAAAABAAAAAAASAAwAAAABAAAAAAATAA0AAAABAAAAAAAUAA4AAAABAAAAAAAVAA8AAAABAAAAAAAWABAAAAABAAAAAAAXABEAAAABAAEAAAANAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAGABEAAAACAAEAAAAWABEAAAACAAAAAAAVABEAAAACAAAAAAAUABEAAAACAAAAAAATABEAAAACAAAAAAASABEAAAACAAAAAAARABEAAAACAAAAAAAQABEAAAACAAAAAAAPABEAAAACAAAAAAAOABEAAAACAAAAAAANABEAAAACAAAAAAAMABEAAAACAAAAAAALABEAAAACAAAAAAAKABEAAAACAAAAAAAJABEAAAACAAAAAAAIABEAAAACAAAAAAAHABEAAAACAAAAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAPAA8AAAAAAAEAAAAOAA8AAAAAAAEAAAAOAA0AAAAAAAEAAAAPAA0AAAAAAAEAAAAPAAwAAAAAAAEAAAAOAAwAAAAAAAEAAAAOAAsAAAAAAAEAAAAPAAsAAAAAAAEAAAAOAAoAAAACAAAAAAAPAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_xgg8w")
+
+[node name="Button2" type="Button" parent="error2" unique_id=988222924]
+z_index = 10
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_57qmd")
+
+[node name="x2" type="TileMapLayer" parent="error2/Button2" unique_id=1628571843]
+z_index = 10
+position = Vector2(-160, -256)
+tile_map_data = PackedByteArray("AAAFAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="error3" type="ColorRect" parent="." unique_id=421793571]
+visible = false
+z_index = 15
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -204.0
+offset_right = 400.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="lost3" type="Label" parent="error3" unique_id=588938361]
+z_index = 15
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -110.0
+offset_right = 69.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.5116247, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "VIRUS DETECTED"
+
+[node name="!3" type="TileMapLayer" parent="error3" unique_id=735468637]
+z_index = 15
+position = Vector2(-150, -250)
+tile_map_data = PackedByteArray("AAAOAAkAAAAAAAAAAAAPAAkAAAABAAAAAAAQAAoAAAABAAAAAAARAAsAAAABAAAAAAASAAwAAAABAAAAAAATAA0AAAABAAAAAAAUAA4AAAABAAAAAAAVAA8AAAABAAAAAAAWABAAAAABAAAAAAAXABEAAAABAAEAAAANAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAGABEAAAACAAEAAAAWABEAAAACAAAAAAAVABEAAAACAAAAAAAUABEAAAACAAAAAAATABEAAAACAAAAAAASABEAAAACAAAAAAARABEAAAACAAAAAAAQABEAAAACAAAAAAAPABEAAAACAAAAAAAOABEAAAACAAAAAAANABEAAAACAAAAAAAMABEAAAACAAAAAAALABEAAAACAAAAAAAKABEAAAACAAAAAAAJABEAAAACAAAAAAAIABEAAAACAAAAAAAHABEAAAACAAAAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAPAA8AAAAAAAEAAAAOAA8AAAAAAAEAAAAOAA0AAAAAAAEAAAAPAA0AAAAAAAEAAAAPAAwAAAAAAAEAAAAOAAwAAAAAAAEAAAAOAAsAAAAAAAEAAAAPAAsAAAAAAAEAAAAOAAoAAAACAAAAAAAPAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_xgg8w")
+
+[node name="Button3" type="Button" parent="error3" unique_id=746529972]
+z_index = 15
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_57qmd")
+
+[node name="x3" type="TileMapLayer" parent="error3/Button3" unique_id=635891889]
+z_index = 15
+position = Vector2(-160, -256)
+tile_map_data = PackedByteArray("AAAFAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="error4" type="ColorRect" parent="." unique_id=1616602527]
+visible = false
+z_index = 20
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -180.0
+offset_right = 432.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="lost4" type="Label" parent="error4" unique_id=545001402]
+z_index = 20
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -110.0
+offset_right = 69.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.5116247, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "VIRUS DETECTED"
+
+[node name="!4" type="TileMapLayer" parent="error4" unique_id=1493173223]
+z_index = 20
+position = Vector2(-150, -250)
+tile_map_data = PackedByteArray("AAAOAAkAAAAAAAAAAAAPAAkAAAABAAAAAAAQAAoAAAABAAAAAAARAAsAAAABAAAAAAASAAwAAAABAAAAAAATAA0AAAABAAAAAAAUAA4AAAABAAAAAAAVAA8AAAABAAAAAAAWABAAAAABAAAAAAAXABEAAAABAAEAAAANAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAGABEAAAACAAEAAAAWABEAAAACAAAAAAAVABEAAAACAAAAAAAUABEAAAACAAAAAAATABEAAAACAAAAAAASABEAAAACAAAAAAARABEAAAACAAAAAAAQABEAAAACAAAAAAAPABEAAAACAAAAAAAOABEAAAACAAAAAAANABEAAAACAAAAAAAMABEAAAACAAAAAAALABEAAAACAAAAAAAKABEAAAACAAAAAAAJABEAAAACAAAAAAAIABEAAAACAAAAAAAHABEAAAACAAAAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAPAA8AAAAAAAEAAAAOAA8AAAAAAAEAAAAOAA0AAAAAAAEAAAAPAA0AAAAAAAEAAAAPAAwAAAAAAAEAAAAOAAwAAAAAAAEAAAAOAAsAAAAAAAEAAAAPAAsAAAAAAAEAAAAOAAoAAAACAAAAAAAPAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_xgg8w")
+
+[node name="Button4" type="Button" parent="error4" unique_id=1085908462]
+z_index = 20
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_57qmd")
+
+[node name="x4" type="TileMapLayer" parent="error4/Button4" unique_id=652466711]
+z_index = 20
+position = Vector2(-160, -256)
+tile_map_data = PackedByteArray("AAAFAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="error5" type="ColorRect" parent="." unique_id=364937707]
+visible = false
+z_index = 25
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -140.0
+offset_right = 464.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="lost5" type="Label" parent="error5" unique_id=64368282]
+z_index = 25
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -110.0
+offset_right = 69.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.5116247, 0, 0, 1)
+theme_override_font_sizes/font_size = 54
+text = "VIRUS DETECTED"
+
+[node name="!5" type="TileMapLayer" parent="error5" unique_id=1236740567]
+z_index = 25
+position = Vector2(-150, -250)
+tile_map_data = PackedByteArray("AAAOAAkAAAAAAAAAAAAPAAkAAAABAAAAAAAQAAoAAAABAAAAAAARAAsAAAABAAAAAAASAAwAAAABAAAAAAATAA0AAAABAAAAAAAUAA4AAAABAAAAAAAVAA8AAAABAAAAAAAWABAAAAABAAAAAAAXABEAAAABAAEAAAANAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAGABEAAAACAAEAAAAWABEAAAACAAAAAAAVABEAAAACAAAAAAAUABEAAAACAAAAAAATABEAAAACAAAAAAASABEAAAACAAAAAAARABEAAAACAAAAAAAQABEAAAACAAAAAAAPABEAAAACAAAAAAAOABEAAAACAAAAAAANABEAAAACAAAAAAAMABEAAAACAAAAAAALABEAAAACAAAAAAAKABEAAAACAAAAAAAJABEAAAACAAAAAAAIABEAAAACAAAAAAAHABEAAAACAAAAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAPAA8AAAAAAAEAAAAOAA8AAAAAAAEAAAAOAA0AAAAAAAEAAAAPAA0AAAAAAAEAAAAPAAwAAAAAAAEAAAAOAAwAAAAAAAEAAAAOAAsAAAAAAAEAAAAPAAsAAAAAAAEAAAAOAAoAAAACAAAAAAAPAAoAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_xgg8w")
+
+[node name="Button5" type="Button" parent="error5" unique_id=186691138]
+z_index = 25
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 42.0
+offset_bottom = 38.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_57qmd")
+
+[node name="x5" type="TileMapLayer" parent="error5/Button5" unique_id=1781515290]
+z_index = 25
+position = Vector2(-160, -256)
+tile_map_data = PackedByteArray("AAAFAAgAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_yf5fn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=988033732]
+stream = ExtResource("4_r6ms4")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=2083471601]
+stream = ExtResource("5_jxpam")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=292088863]
+stream = ExtResource("6_idukc")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=367504003]
+stream = ExtResource("7_ktdw2")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." unique_id=1804378459]
+stream = ExtResource("8_0oy2w")
+
+[connection signal="pressed" from="error/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="error2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="error3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="error4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="error5/Button5" to="." method="_on_button_5_pressed"]

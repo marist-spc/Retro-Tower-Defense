@@ -1,0 +1,383 @@
+[gd_scene format=3 uid="uid://1ibxqcr36mqf"]
+
+[ext_resource type="Texture2D" uid="uid://bpqov253g1jnq" path="res://art/MyDoom/head/MyDoom-head-1.png.png" id="1_0dbrs"]
+[ext_resource type="Script" uid="uid://bkk27yov8igl" path="res://mydoom.gd" id="1_wudhj"]
+[ext_resource type="Texture2D" uid="uid://bo3elw87tqmrh" path="res://art/MyDoom/head/MyDoom-head-2.png.png" id="2_708iw"]
+[ext_resource type="Texture2D" uid="uid://cddbsr4snabhj" path="res://art/MyDoom/head/MyDoom-head-3.png.png" id="3_50kqe"]
+[ext_resource type="Texture2D" uid="uid://bej263414c4es" path="res://art/Boss Death/boss-death-1.png.png" id="3_dmr73"]
+[ext_resource type="Texture2D" uid="uid://c02fw71pabxem" path="res://art/MyDoom/head/MyDoom-head-4.png.png" id="4_pc0w3"]
+[ext_resource type="Texture2D" uid="uid://dvw4e08h7m1r2" path="res://art/Boss Death/boss-death-2.png.png" id="4_u28gn"]
+[ext_resource type="Texture2D" uid="uid://cinq7lfccv0sk" path="res://art/Boss Death/boss-death-3.png.png" id="5_nxc4d"]
+[ext_resource type="Texture2D" uid="uid://bayr64apykw03" path="res://art/MyDoom/head/MyDoom-head-5.png.png" id="5_pfvi0"]
+[ext_resource type="Texture2D" uid="uid://cuij56gvqfofq" path="res://art/Boss Death/boss-death-4.png.png" id="6_dhade"]
+[ext_resource type="Texture2D" uid="uid://bfv3f6xctb6wq" path="res://art/MyDoom/head/MyDoom-head-6.png.png" id="6_xwmfs"]
+[ext_resource type="Texture2D" uid="uid://b5qtfflbgc7y4" path="res://art/Boss Death/boss-death-5.png.png" id="7_qhln7"]
+[ext_resource type="Texture2D" uid="uid://br03v3gw320yd" path="res://art/MyDoom/head/MyDoom-head-shrink.png.png" id="7_unhnw"]
+[ext_resource type="Texture2D" uid="uid://jkdfto5ab4pc" path="res://art/Boss Death/boss-death-6.png.png" id="8_bjkww"]
+[ext_resource type="Texture2D" uid="uid://1nokaxcsc0gx" path="res://art/MyDoom/segment/MyDoom-segment-1.png.png" id="8_vh8td"]
+[ext_resource type="Texture2D" uid="uid://doqegvqeo4sol" path="res://art/Boss Death/boss-death-7.png.png" id="9_grnu6"]
+[ext_resource type="Texture2D" uid="uid://bqg50xcj0d7bw" path="res://art/MyDoom/segment/MyDoom-segment-2.png.png" id="9_wudhj"]
+[ext_resource type="Texture2D" uid="uid://wlmuvesn8bt8" path="res://art/MyDoom/segment/MyDoom-segment-3.png.png" id="10_rvm8v"]
+[ext_resource type="Texture2D" uid="uid://crg04hboh4gh0" path="res://art/MyDoom/segment/MyDoom-segment-4.png.png" id="11_aovqe"]
+[ext_resource type="Texture2D" uid="uid://cf0e1i2gkvcsm" path="res://art/MyDoom/segment/MyDoom-segment-5.png.png" id="12_4h3om"]
+[ext_resource type="Texture2D" uid="uid://cp5qg4pe0r0ux" path="res://art/MyDoom/segment/MyDoom-segment-6.png.png" id="13_4w7wm"]
+[ext_resource type="Texture2D" uid="uid://dn451g8t1hk4k" path="res://art/MyDoom/tail/MyDoom-tail-1.png.png" id="14_x66jn"]
+[ext_resource type="Texture2D" uid="uid://lat64s3a60sy" path="res://art/MyDoom/tail/MyDoom-tail-2.png.png" id="15_turg2"]
+[ext_resource type="Texture2D" uid="uid://duisqb76ua073" path="res://art/MyDoom/segment/MyDoom-segment-no-lightning.png.png" id="16_4kdbw"]
+[ext_resource type="Texture2D" uid="uid://r3ld70d6vbso" path="res://art/MyDoom/tail/MyDoom-tail-3.png.png" id="16_o4ye5"]
+[ext_resource type="Texture2D" uid="uid://mnhcl4lg4gjv" path="res://art/MyDoom/tail/MyDoom-tail-4.png.png" id="17_doy5f"]
+[ext_resource type="Texture2D" uid="uid://debls6rsqei4h" path="res://art/MyDoom/tail/MyDoom-tail-5.png.png" id="18_dmr73"]
+[ext_resource type="Texture2D" uid="uid://bmqh7t48w5rhb" path="res://art/MyDoom/tail/MyDoom-tail-6.png.png" id="19_u28gn"]
+[ext_resource type="Texture2D" uid="uid://c8l52nxvhb2gy" path="res://art/MyDoom/tail/MyDoom-tail-no-lightning.png.png" id="23_2oc6h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33iqn"]
+size = Vector2(32, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te6hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_unhnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u28gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxc4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjkww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_grnu6")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0dbrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_708iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_50kqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pc0w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pfvi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xwmfs")
+}],
+"loop": 1,
+"name": &"headGo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_unhnw")
+}],
+"loop": 1,
+"name": &"shrink",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vwy3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4kdbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u28gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxc4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjkww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_grnu6")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vh8td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wudhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rvm8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aovqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4h3om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4w7wm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4wr1"]
+size = Vector2(32, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qg3j"]
+size = Vector2(32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_487rn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4kdbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u28gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxc4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjkww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_grnu6")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vh8td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wudhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rvm8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aovqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4h3om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4w7wm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c84j"]
+size = Vector2(32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kiq32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4kdbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u28gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxc4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjkww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_grnu6")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vh8td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wudhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rvm8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aovqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4h3om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4w7wm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te6hp"]
+size = Vector2(32, 29)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul4by"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_2oc6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u28gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nxc4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhade")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qhln7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bjkww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_grnu6")
+}],
+"loop": 1,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_x66jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_turg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o4ye5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_doy5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dmr73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_u28gn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mydoom" type="CharacterBody2D" unique_id=1818329966]
+collision_layer = 2
+script = ExtResource("1_wudhj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717983921]
+position = Vector2(128, 0)
+shape = SubResource("RectangleShape2D_33iqn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2059761101]
+position = Vector2(128, 0)
+sprite_frames = SubResource("SpriteFrames_te6hp")
+animation = &"death"
+autoplay = "headGo"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1251578329]
+position = Vector2(96, 0)
+sprite_frames = SubResource("SpriteFrames_vwy3l")
+animation = &"death"
+autoplay = "default"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1336631838]
+position = Vector2(96, 0)
+shape = SubResource("RectangleShape2D_w4wr1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=586764893]
+position = Vector2(64, 0)
+shape = SubResource("RectangleShape2D_4qg3j")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=658278123]
+position = Vector2(64, 0)
+sprite_frames = SubResource("SpriteFrames_487rn")
+animation = &"death"
+autoplay = "default"
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=358731562]
+position = Vector2(32, 0)
+shape = SubResource("RectangleShape2D_7c84j")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." unique_id=954039389]
+position = Vector2(32, 0)
+sprite_frames = SubResource("SpriteFrames_kiq32")
+animation = &"death"
+autoplay = "default"
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1274802732]
+shape = SubResource("RectangleShape2D_te6hp")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="." unique_id=1157415634]
+sprite_frames = SubResource("SpriteFrames_ul4by")
+autoplay = "default"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1749729009]
+rect = Rect2(-16, -15, 160, 30)

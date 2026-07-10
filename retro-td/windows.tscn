@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://c3blkrrsf7jkv" path="res://tile_sheet_128px_by_128px.png" id="1_22j4m"]
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="1_dkob1"]
+[ext_resource type="PackedScene" uid="uid://ddjgwat3ethkc" path="res://tower_select.tscn" id="3_pxnrm"]
+[ext_resource type="PackedScene" uid="uid://25065dqdpru6" path="res://exit.tscn" id="4_q377a"]
+[ext_resource type="PackedScene" uid="uid://ptj8npe25q8k" path="res://wave_list.tscn" id="5_3p6kv"]
+[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="6_mkbnd"]
+[ext_resource type="PackedScene" uid="uid://cm2rk3kxcfy8s" path="res://next_wave.tscn" id="7_bgkig"]
+[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="8_c5jdp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_22j4m")
@@ -34,3 +40,30 @@ curve = SubResource("Curve2D_ig7tw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="TileMapLayer/Path2D" unique_id=1080315445]
 position = Vector2(0, 144)
+
+[node name="TowerSelect" parent="." unique_id=299246085 instance=ExtResource("3_pxnrm")]
+visible = false
+
+[node name="Exit" parent="." unique_id=879292014 instance=ExtResource("4_q377a")]
+visible = false
+
+[node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("5_3p6kv")]
+pathAssign = NodePath("../TileMapLayer/Path2D/PathFollow2D")
+
+[node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("7_bgkig")]
+offset_left = 602.0
+offset_top = 26.0
+offset_right = 864.0
+offset_bottom = 95.0
+
+[node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("8_c5jdp")]
+position = Vector2(495.99997, 987.99994)
+rotation = 1.5686346
+
+[node name="SpawnTimer2" type="Timer" parent="." unique_id=1274522232]
+autostart = true
+script = ExtResource("6_mkbnd")
+
+[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
+[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
+[connection signal="timeout" from="SpawnTimer2" to="WaveList" method="_on_spawn_timer_timeout"]
