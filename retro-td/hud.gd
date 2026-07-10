@@ -17,6 +17,9 @@ func add_points(amount: int):
 
 func _process(_delta: float) -> void:
 	cryptoScreen.text="Crypto: "+str(current_score)
+	if security<0:
+		security=0
+	
 
 
 func _on_endpoint_body_entered(body: Node2D) -> void:
