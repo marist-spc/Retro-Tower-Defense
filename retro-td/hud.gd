@@ -13,9 +13,15 @@ func add_points(amount: int):
 	
 var amount = 1
 
+func _process(_delta: float) -> void:
+	cryptoScreen.text="Crypto: "+str(current_score)
+
 
 func _on_endpoint_body_entered(body: Node2D) -> void:
 	security-=body.health
 	
 	
 	securityScreen.text="Security: "+ str(security)
+	
+	body.queue_free()
+	

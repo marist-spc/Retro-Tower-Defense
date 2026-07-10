@@ -266,6 +266,7 @@ animations = [{
 size = Vector2(32, 32)
 
 [node name="Poppup" type="CharacterBody2D" unique_id=610460972]
+collision_layer = 2
 script = ExtResource("1_36oe5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=100984098]

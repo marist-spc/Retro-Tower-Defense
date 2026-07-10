@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://jke17f54lhqf"]
 
+[ext_resource type="FontFile" uid="uid://bxp4l0yjwgu61" path="res://art/PressStart2P-Regular.ttf" id="1_b6ct4"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_te6hp"]
 bg_color = Color(1, 0, 0.6901961, 1)
 border_width_left = 5
@@ -23,7 +25,8 @@ theme_override_colors/icon_focus_color = Color(1, 0, 0.6, 1)
 theme_override_colors/icon_pressed_color = Color(1, 0, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 0, 0.8, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0.8, 1)
-theme_override_font_sizes/font_size = 33
+theme_override_fonts/font = ExtResource("1_b6ct4")
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_te6hp")
 action_mode = 0
 button_mask = 3

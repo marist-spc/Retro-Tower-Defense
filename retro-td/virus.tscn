@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://qwjt115f7ndi" path="res://art/brown/brown-walk-1.png.png" id="15_en5it"]
 [ext_resource type="Texture2D" uid="uid://bu2k4ifkk6683" path="res://art/brown/brown-walk-2.png.png" id="16_fsaqd"]
 [ext_resource type="Texture2D" uid="uid://dtcecwly4olgk" path="res://art/brown/brown-walk-3.png.png" id="17_p4e7d"]
+[ext_resource type="Texture2D" uid="uid://cy5g1ra1s51fa" path="res://art/Firewall Background Sprites/Dead Virus 3-1.png.png" id="18_0k36j"]
 [ext_resource type="Texture2D" uid="uid://bklq88wfax0l4" path="res://art/gray/gray-die-1.png.png" id="18_lnw4o"]
 [ext_resource type="Texture2D" uid="uid://batkvfl0efgwr" path="res://art/gray/gray-die-2.png.png" id="19_0hw27"]
 [ext_resource type="Texture2D" uid="uid://qhtf2l17dbch" path="res://art/gray/gray-die-3.png.png" id="20_rqx8n"]
@@ -126,6 +127,19 @@ animations = [{
 }],
 "loop": 1,
 "name": &"brown-walk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"debug-invisible",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_0k36j")
+}],
+"loop": 1,
+"name": &"debug-placeholder",
 "speed": 5.0
 }, {
 "frames": [{
@@ -308,8 +322,7 @@ script = ExtResource("1_hjiwg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=355022236]
 sprite_frames = SubResource("SpriteFrames_te6hp")
-animation = &"blue-walk"
-frame_progress = 0.81417775
+animation = &"debug-placeholder"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1795944453]
 position = Vector2(-1, -2)
