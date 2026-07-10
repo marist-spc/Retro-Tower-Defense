@@ -108,8 +108,17 @@ func health_zero():
 			$AnimatedSprite2D.play("gray-die")
 			$hud.current_score = $hud.current_score + grayHealth
 		
-		
-		
+		var soundNum=randi_range(1,5)
+		if soundNum == 1:
+			$AudioStreamPlayer.play() 
+		if soundNum == 2:
+			$AudioStreamPlayer2.play() 
+		if soundNum == 3:
+			$AudioStreamPlayer3.play() 
+		if soundNum == 4:
+			$AudioStreamPlayer4.play() 
+		if soundNum == 5:
+			$AudioStreamPlayer5.play() 
 		queue_free()
 		
 

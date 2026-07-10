@@ -58,6 +58,11 @@
 [ext_resource type="Texture2D" uid="uid://dyv0hem1i74ob" path="res://art/yellow/yellow-walk-1.png.png" id="55_wjbdk"]
 [ext_resource type="Texture2D" uid="uid://bqrbiyqg268xc" path="res://art/yellow/yellow-walk-2.png.png" id="56_wq7nr"]
 [ext_resource type="Texture2D" uid="uid://c8hdp6iya7dhr" path="res://art/yellow/yellow-walk-3.png.png" id="57_o16q8"]
+[ext_resource type="AudioStream" uid="uid://deenmfb3eindd" path="res://scratch_001.ogg" id="59_2chvc"]
+[ext_resource type="AudioStream" uid="uid://dfyjj8xjwemdp" path="res://scratch_002.ogg" id="60_xsvm6"]
+[ext_resource type="AudioStream" uid="uid://cor8dyrs8e1ew" path="res://scratch_003.ogg" id="61_pmtlm"]
+[ext_resource type="AudioStream" uid="uid://bk0fiuufckymj" path="res://scratch_004.ogg" id="62_he8b5"]
+[ext_resource type="AudioStream" uid="uid://4v2ch4ucicxm" path="res://scratch_005.ogg" id="63_qy5op"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_te6hp"]
 animations = [{
@@ -331,5 +336,20 @@ shape = SubResource("CircleShape2D_7c84j")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=245883417]
 position = Vector2(-6, 0)
 rect = Rect2(-10, -16, 30, 31)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=941106902]
+stream = ExtResource("59_2chvc")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1703564529]
+stream = ExtResource("60_xsvm6")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=2111700444]
+stream = ExtResource("61_pmtlm")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1936356844]
+stream = ExtResource("62_he8b5")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." unique_id=1423862216]
+stream = ExtResource("63_qy5op")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
