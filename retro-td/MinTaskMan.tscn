@@ -35,7 +35,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_hnj8d")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -46,13 +46,13 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_bbqas")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade path 2",
 "speed": 5.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=463841486]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"MTM Bullets"
+animation = &"Upgrade path 2"
 script = ExtResource("7_824dr")
 cost = 1000

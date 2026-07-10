@@ -41,7 +41,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_ohj0f")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
 "speed": 5.0
 }]

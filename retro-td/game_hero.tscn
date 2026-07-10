@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_46hoe")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -48,7 +48,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_5r1wv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1 Bullets",
 "speed": 5.0
 }, {
@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_k4kta")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2 Bullets",
 "speed": 5.0
 }]

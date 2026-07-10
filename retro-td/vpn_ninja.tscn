@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b6fnqbyq44vcn" path="res://art/Tower Sprites/VPN Ninja-3.png.png" id="5_c8xho"]
 [ext_resource type="Texture2D" uid="uid://c0wfrdq22c4am" path="res://art/Tower Sprites/VPN Ninja-5.png.png" id="6_p62lj"]
 [ext_resource type="Texture2D" uid="uid://da8b06f8weqrj" path="res://art/Tower Sprites/VPN Ninja-7.png.png" id="7_ht82x"]
-[ext_resource type="Script" uid="uid://dlvqu5qk0mpbf" path="res://Tower.gd" id="8_u7qpj"]
+[ext_resource type="Script" uid="uid://bn624n8hg6ljl" path="res://vpn_ninja.gd" id="10_i2wwe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v4uss"]
 animations = [{
@@ -17,7 +17,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_i2wwe")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Ninja Bullet",
 "speed": 5.0
 }, {
@@ -42,7 +42,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_05oqr")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 1",
 "speed": 5.0
 }, {
@@ -59,16 +59,12 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_ht82x")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Upgrade Path 2",
 "speed": 5.0
 }]
 
 [node name="VPN Ninja" type="AnimatedSprite2D" unique_id=1851622354]
 sprite_frames = SubResource("SpriteFrames_v4uss")
-animation = &"Ninja Trap"
-script = ExtResource("8_u7qpj")
-upgrade_costs = {
-"path1": [500, 1000, 10000],
-"path2": [100, 750, 3500]
-}
+animation = &"Upgrade Path 2"
+script = ExtResource("10_i2wwe")
