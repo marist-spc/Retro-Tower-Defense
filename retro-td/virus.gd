@@ -112,3 +112,9 @@ func health_zero():
 		
 		queue_free()
 		
+
+
+func ending():
+	if $hud.security<=0:
+		queue_free()
+		$SpawnTimer.stop()

@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal stopTimer
+
 @export var cryptoScreen: Label
 @export var securityScreen: Label
 
@@ -25,3 +27,7 @@ func _on_endpoint_body_entered(body: Node2D) -> void:
 	
 	body.queue_free()
 	
+
+func death():
+	if security<=0:
+		stopTimer.emit()

@@ -73,6 +73,7 @@ offset_top = 30.0
 offset_right = 984.0
 offset_bottom = 99.0
 
+[connection signal="stopTimer" from="Hud" to="SpawnTimer" method="_on_hud_stop_timer"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://jke17f54lhqf" path="res://next_wave.tscn" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
@@ -46,6 +47,7 @@ rotation = 1.5686346
 [node name="Hud" parent="." unique_id=1658330229 instance=ExtResource("4_1bvp3")]
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=2072539767]
+script = ExtResource("5_7mycd")
 
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("5_lquwl")]
 offset_left = 790.0
@@ -54,5 +56,6 @@ offset_right = 976.0
 offset_bottom = 95.0
 
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
+[connection signal="stopTimer" from="Hud" to="SpawnTimer" method="_on_hud_stop_timer"]
 [connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
 [connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
