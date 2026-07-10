@@ -15,11 +15,6 @@ loop_end = 1041000
 mix_rate = 48000
 stereo = true
 
-[node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen")]
-script = ExtResource("1_37p78")
-cryptoScreen = NodePath("Crypto")
-securityScreen = NodePath("Health")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8sq4i"]
 texture = ExtResource("2_64ctp")
 texture_region_size = Vector2i(32, 32)
@@ -30,6 +25,11 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_yf5fn"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_8sq4i")
+
+[node name="Hud" type="CanvasLayer" unique_id=1658330229 node_paths=PackedStringArray("cryptoScreen", "securityScreen")]
+script = ExtResource("1_37p78")
+cryptoScreen = NodePath("Crypto")
+securityScreen = NodePath("Health")
 
 [node name="Button" type="Button" parent="." unique_id=1791014824]
 offset_top = 176.0
