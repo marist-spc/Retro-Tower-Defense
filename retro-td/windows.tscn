@@ -64,6 +64,7 @@ rotation = 1.5686346
 autostart = true
 script = ExtResource("6_mkbnd")
 
+[connection signal="stopTimer" from="Hud" to="SpawnTimer2" method="_on_hud_stop_timer"]
 [connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
 [connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
 [connection signal="timeout" from="SpawnTimer2" to="WaveList" method="_on_spawn_timer_timeout"]

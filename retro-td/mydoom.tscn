@@ -331,53 +331,55 @@ animations = [{
 [node name="Mydoom" type="CharacterBody2D" unique_id=1818329966]
 collision_layer = 2
 script = ExtResource("1_wudhj")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717983921]
-position = Vector2(128, 0)
 shape = SubResource("RectangleShape2D_33iqn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2059761101]
-position = Vector2(128, 0)
 sprite_frames = SubResource("SpriteFrames_te6hp")
 animation = &"death"
 autoplay = "headGo"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1251578329]
-position = Vector2(96, 0)
+position = Vector2(-32, 0)
 sprite_frames = SubResource("SpriteFrames_vwy3l")
 animation = &"death"
 autoplay = "default"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1336631838]
-position = Vector2(96, 0)
+position = Vector2(-32, 0)
 shape = SubResource("RectangleShape2D_w4wr1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=586764893]
-position = Vector2(64, 0)
+position = Vector2(-64, 0)
 shape = SubResource("RectangleShape2D_4qg3j")
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=658278123]
-position = Vector2(64, 0)
+position = Vector2(-64, 0)
 sprite_frames = SubResource("SpriteFrames_487rn")
 animation = &"death"
 autoplay = "default"
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=358731562]
-position = Vector2(32, 0)
+position = Vector2(-96, 0)
 shape = SubResource("RectangleShape2D_7c84j")
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="." unique_id=954039389]
-position = Vector2(32, 0)
+position = Vector2(-96, 0)
 sprite_frames = SubResource("SpriteFrames_kiq32")
 animation = &"death"
 autoplay = "default"
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1274802732]
+position = Vector2(-128, 0)
 shape = SubResource("RectangleShape2D_te6hp")
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="." unique_id=1157415634]
+position = Vector2(-128, 0)
 sprite_frames = SubResource("SpriteFrames_ul4by")
 autoplay = "default"
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1749729009]
+position = Vector2(-128, 0)
 rect = Rect2(-16, -15, 160, 30)
