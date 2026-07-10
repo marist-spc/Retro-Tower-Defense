@@ -2,6 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://dhdgcb54wyt0b" path="res://transparent_box.tres" id="1_6sfst"]
 [ext_resource type="Script" uid="uid://cf5xjweijfq7w" path="res://exit.gd" id="1_24kvk"]
+[ext_resource type="AudioStream" uid="uid://u16yvtgmqhag" path="res://art/back_001.ogg" id="3_mlcv5"]
 
 [sub_resource type="Theme" id="Theme_g4v7s"]
 
@@ -73,6 +74,9 @@ offset_right = 462.0
 offset_bottom = 222.0
 theme_override_font_sizes/font_size = 64
 text = "NO"
+
+[node name="BackAudio" type="AudioStreamPlayer" parent="." unique_id=198166268]
+stream = ExtResource("3_mlcv5")
 
 [connection signal="pressed" from="Yesbutton" to="." method="_on_yesbutton_pressed"]
 [connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]

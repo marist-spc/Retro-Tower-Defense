@@ -8,8 +8,10 @@ func add_points(amount: int):
 
 
 func _on_button_pressed():
+	$Back_menu.play()
 	get_parent().get_node("Exit").show()
 
 
 func _on_file_button_pressed() -> void:
+	$FileOpen.play()
 	get_parent().get_node("TowerSelect").show()

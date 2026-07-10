@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bsng7rg3drqki" path="res://Tower_Dropout.png" id="1_5ske8"]
 [ext_resource type="Script" uid="uid://bthrrw4wnyd01" path="res://tower_select.gd" id="1_m11vb"]
+[ext_resource type="AudioStream" uid="uid://cpc5rjocqaw4l" path="res://minimize_002.ogg" id="3_2qfo2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m11vb"]
 texture = ExtResource("1_5ske8")
@@ -26,6 +27,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qfo2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m11vb"]
+
 [node name="TowerSelect" type="CanvasLayer" unique_id=299246085]
 script = ExtResource("1_m11vb")
 
@@ -37,5 +42,10 @@ tile_set = SubResource("TileSet_yf5fn")
 offset_right = 736.0
 offset_bottom = 1024.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_m11vb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2qfo2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m11vb")
+
+[node name="FileClose" type="AudioStreamPlayer" parent="." unique_id=303130425]
+stream = ExtResource("3_2qfo2")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

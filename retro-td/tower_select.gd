@@ -9,4 +9,5 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_node("TowerSelect").hide()
+	$FileClose.play()
+	hide()

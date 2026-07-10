@@ -63,3 +63,5 @@ visible = false
 
 [node name="Exit" parent="." unique_id=879292014 instance=ExtResource("4_lnoga")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1458890586]

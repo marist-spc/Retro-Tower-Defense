@@ -9,8 +9,10 @@ func _ready() -> void:
 
 
 func _on_no_button_pressed() -> void:
+	$BackAudio.play()
 	get_parent().get_node("Exit").hide()
 
 
 func _on_yesbutton_pressed() -> void:
+	$BackAudio.play()
 	get_tree().change_scene_to_file("res://main_menu.tscn")

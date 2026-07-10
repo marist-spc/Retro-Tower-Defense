@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnonpweip6ulb" path="res://Knight.png" id="8_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://q8plgdo7egmy" path="res://art/green/green-walk.png-2.png.png" id="9_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://cxq8jrugy0bou" path="res://art/blue/blue-walk1.png" id="10_0k4wn"]
+[ext_resource type="AudioStream" uid="uid://ckd8oydswxbrj" path="res://art/switch_007.ogg" id="11_0k4wn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qtwp"]
 texture = ExtResource("1_jix8l")
@@ -151,6 +152,9 @@ position = Vector2(716, 246.99997)
 rotation = -0.29670596
 scale = Vector2(3.03125, 3.125)
 texture = ExtResource("10_0k4wn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1714781503]
+stream = ExtResource("11_0k4wn")
 
 [connection signal="pressed" from="CanvasLayer/MotherboardButton" to="." method="_on_motherboard_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/WindowsButton" to="." method="_on_windows_button_pressed"]
