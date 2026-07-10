@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Retro-TD"
-run/main_scene="uid://co7y788b5ggs6"
+run/main_scene="uid://bxofsksqvpam6"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
