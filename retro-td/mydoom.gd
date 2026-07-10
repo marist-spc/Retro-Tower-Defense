@@ -33,15 +33,15 @@ func _process(delta: float) -> void:
 	progress+=goodSpeed*delta
 	path.progress = progress
 	position = path.position
-	
-	if velocity.y<=-1:
-		rotation=-90
-	elif velocity.y>=1:
-		rotation=90
-	if velocity.x>=1:
-		rotation=0
-	elif velocity.x<=-1:
-		rotation=180
+	rotation = path.rotation
+	#if velocity.y<=-1:
+		#rotation=-PI/2
+	#elif velocity.y>=1:
+		#rotation=PI/2
+	#elif velocity.x>=1:
+		#rotation=0
+	#elif velocity.x<=-1:
+		#rotation=PI
 	
 
 

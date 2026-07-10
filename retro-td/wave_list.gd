@@ -115,13 +115,17 @@ func _on_spawn_timer_timeout():
 		mydoomGo.path=pathAssign
 		add_child(mydoomGo)
 		waveFinished=true
-	
+	#elif (waveNum==1)&&waveFinished==false:
+		#var mydoomGo=MyDoom.instantiate()
+		#mydoomGo.path=pathAssign
+		#add_child(mydoomGo)
+		#waveFinished=true
 	
 
 
 func _on_next_wave_pressed() -> void:
 	
-	if waveFinished==true:
+	if waveFinished==true and waveNum<60:
 		waveNum+=1
 		$Label.text="Wave: "+str(waveNum)
 		WhichWave=waves.pop_front()
