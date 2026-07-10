@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cx0m8xjqnvq8x"]
 
 [ext_resource type="Script" uid="uid://bp8p2oook3iot" path="res://hud.gd" id="1_37p78"]
-[ext_resource type="FontFile" uid="uid://bxp4l0yjwgu61" path="res://art/PressStart2P-Regular.ttf" id="2_64ctp"]
+[ext_resource type="FontFile" uid="uid://bxp4l0yjwgu61" path="res://art/PressStart2P-Regular.ttf" id="2_1xsix"]
 [ext_resource type="StyleBox" uid="uid://dhdgcb54wyt0b" path="res://transparent_box.tres" id="2_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://bsng7rg3drqki" path="res://Tower_Dropout.png" id="2_64ctp"]
 [ext_resource type="AudioStream" uid="uid://u16yvtgmqhag" path="res://art/back_001.ogg" id="4_640wx"]
@@ -35,6 +35,7 @@ securityScreen = NodePath("Health")
 offset_top = 176.0
 offset_right = 95.0
 offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("2_1xsix")
 
 [node name="Back" type="Label" parent="Button" unique_id=1259288551]
 layout_mode = 0
@@ -53,7 +54,7 @@ offset_right = 366.0
 offset_bottom = 41.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
 theme_override_colors/font_outline_color = Color(0.6745098, 0, 1, 1)
-theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_fonts/font = ExtResource("2_1xsix")
 theme_override_font_sizes/font_size = 32
 text = "Crypto: 500"
 
@@ -64,7 +65,7 @@ offset_right = 430.0
 offset_bottom = 85.0
 theme_override_colors/font_color = Color(1, 0, 0.9764706, 1)
 theme_override_colors/font_outline_color = Color(0.6745098, 0, 1, 1)
-theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_fonts/font = ExtResource("2_1xsix")
 theme_override_font_sizes/font_size = 32
 text = "Security: 100"
 

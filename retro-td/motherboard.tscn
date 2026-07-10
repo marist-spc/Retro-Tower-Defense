@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cseqdcnw640f6" path="res://Motherboard_tiles (1).png" id="1_ts5x4"]
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="2_8rlo4"]
-[ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="3_n74np"]
-[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="4_w2jd0"]
-[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_20uq4"]
-[ext_resource type="PackedScene" uid="uid://jke17f54lhqf" path="res://next_wave.tscn" id="5_lnoga"]
+[ext_resource type="PackedScene" uid="uid://ptj8npe25q8k" path="res://wave_list.tscn" id="3_n74np"]
 [ext_resource type="PackedScene" uid="uid://ddjgwat3ethkc" path="res://tower_select.tscn" id="3_w2jd0"]
 [ext_resource type="PackedScene" uid="uid://25065dqdpru6" path="res://exit.tscn" id="4_lnoga"]
+[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="4_w2jd0"]
+[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_20uq4"]
+[ext_resource type="PackedScene" uid="uid://cm2rk3kxcfy8s" path="res://next_wave.tscn" id="5_lnoga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rlo4"]
 texture = ExtResource("1_ts5x4")
@@ -65,20 +65,16 @@ rotation = -0.0032102617
 [node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("3_n74np")]
 pathAssign = NodePath("../TileMapLayer/Path2D/PathFollow2D")
 
+[node name="SpawnTimer2" type="Timer" parent="." unique_id=121044966]
+autostart = true
+script = ExtResource("5_20uq4")
+
 [node name="endpoint" parent="." unique_id=935857843 instance=ExtResource("4_w2jd0")]
 position = Vector2(987.99994, 143)
 
-[node name="SpawnTimer" type="Timer" parent="." unique_id=1329883378]
-script = ExtResource("5_20uq4")
-
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("5_lnoga")]
-offset_left = 786.0
-offset_right = 972.0
-
-[connection signal="stopTimer" from="Hud" to="SpawnTimer" method="_on_hud_stop_timer"]
-[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
-[connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
-[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
+offset_left = 607.0
+offset_right = 869.0
 
 [node name="TowerSelect" parent="." unique_id=299246085 instance=ExtResource("3_w2jd0")]
 visible = false
@@ -87,3 +83,7 @@ visible = false
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1458890586]
+
+[connection signal="timeout" from="SpawnTimer2" to="WaveList" method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
+[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]

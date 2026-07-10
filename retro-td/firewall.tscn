@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dhnle82fo316u" path="res://roook.png" id="1_664hb"]
 [ext_resource type="Texture2D" uid="uid://b6nxty01hmy6i" path="res://fire.png" id="2_x700o"]
 [ext_resource type="PackedScene" uid="uid://cx0m8xjqnvq8x" path="res://hud.tscn" id="3_ue4l0"]
-[ext_resource type="PackedScene" uid="uid://vndciyfldo0l" path="res://wave_list.tscn" id="4_kha8f"]
-[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_gcfbm"]
-[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="6_gcfbm"]
-[ext_resource type="PackedScene" uid="uid://jke17f54lhqf" path="res://next_wave.tscn" id="7_nnegc"]
 [ext_resource type="Texture2D" uid="uid://dmc8ifdwci2py" path="res://art/Firewall Background Sprites/Dead Virus 1-1.png.png" id="4_gcfbm"]
+[ext_resource type="PackedScene" uid="uid://ptj8npe25q8k" path="res://wave_list.tscn" id="4_kha8f"]
+[ext_resource type="Script" uid="uid://dfkut5ti8uxnl" path="res://spawn_timer.gd" id="5_gcfbm"]
 [ext_resource type="Texture2D" uid="uid://dhn5jljtscei6" path="res://art/Firewall Background Sprites/Dead Virus 2-1.png.png" id="5_nnegc"]
 [ext_resource type="Texture2D" uid="uid://cy5g1ra1s51fa" path="res://art/Firewall Background Sprites/Dead Virus 3-1.png.png" id="6_664hb"]
+[ext_resource type="PackedScene" uid="uid://31vsekqt52ig" path="res://endpoint.tscn" id="6_gcfbm"]
 [ext_resource type="PackedScene" uid="uid://ddjgwat3ethkc" path="res://tower_select.tscn" id="7_664hb"]
+[ext_resource type="PackedScene" uid="uid://cm2rk3kxcfy8s" path="res://next_wave.tscn" id="7_nnegc"]
 [ext_resource type="PackedScene" uid="uid://25065dqdpru6" path="res://exit.tscn" id="8_gdbu5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwsii"]
@@ -65,7 +65,7 @@ rotation = 0.00095785415
 [node name="WaveList" parent="." unique_id=2102804863 node_paths=PackedStringArray("pathAssign") instance=ExtResource("4_kha8f")]
 pathAssign = NodePath("../Path2D/PathFollow2D")
 
-[node name="SpawnTimer" type="Timer" parent="." unique_id=761466973]
+[node name="SpawnTimer2" type="Timer" parent="." unique_id=761466973]
 autostart = true
 script = ExtResource("5_gcfbm")
 
@@ -73,15 +73,10 @@ script = ExtResource("5_gcfbm")
 position = Vector2(988, 532)
 
 [node name="NextWave" parent="." unique_id=1265753935 instance=ExtResource("7_nnegc")]
-offset_left = 798.0
-offset_top = 30.0
-offset_right = 984.0
-offset_bottom = 99.0
-
-[connection signal="stopTimer" from="Hud" to="SpawnTimer" method="_on_hud_stop_timer"]
-[connection signal="timeout" from="SpawnTimer" to="WaveList" method="_on_spawn_timer_timeout"]
-[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
-[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]
+offset_left = 605.0
+offset_top = 19.0
+offset_right = 867.0
+offset_bottom = 88.0
 
 [node name="DeadViruses" type="Sprite2D" parent="." unique_id=45094552]
 position = Vector2(562, 302)
@@ -113,3 +108,8 @@ visible = false
 
 [node name="Exit" parent="." unique_id=879292014 instance=ExtResource("8_gdbu5")]
 visible = false
+
+[connection signal="stopTimer" from="Hud" to="SpawnTimer2" method="_on_hud_stop_timer"]
+[connection signal="timeout" from="SpawnTimer2" to="WaveList" method="_on_spawn_timer_timeout"]
+[connection signal="body_entered" from="endpoint" to="Hud" method="_on_endpoint_body_entered"]
+[connection signal="pressed" from="NextWave" to="WaveList" method="_on_next_wave_pressed"]

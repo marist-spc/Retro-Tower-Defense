@@ -17,11 +17,11 @@ var goodSpeed=speedMultiplier*speed
 
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("walk")
-	$AnimatedSprite2D2.play("walk")
-	$AnimatedSprite2D3.play("walk")
-	$AnimatedSprite2D4.play("walk")
-	$AnimatedSprite2D5.play("walk")
+	$AnimatedSprite2D.play("headGo")
+	$AnimatedSprite2D2.play("default")
+	$AnimatedSprite2D3.play("default")
+	$AnimatedSprite2D4.play("default")
+	$AnimatedSprite2D5.play("default")
 
 
 
