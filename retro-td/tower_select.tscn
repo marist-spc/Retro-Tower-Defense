@@ -88,10 +88,10 @@ texture = ExtResource("4_vj5v4")
 
 [node name="Label" type="Label" parent="Button2" unique_id=273046148]
 layout_mode = 0
-offset_left = 6.0
-offset_top = -3.0
-offset_right = 112.0
-offset_bottom = 98.0
+offset_left = 3.0
+offset_top = -4.0
+offset_right = 109.0
+offset_bottom = 97.0
 text = "AD-Blocker
 
 
@@ -107,7 +107,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gf5fb")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p6t2v")
 
 [node name="knight" type="Sprite2D" parent="Button3" unique_id=1601026112]
-position = Vector2(110.99999, 128)
+position = Vector2(48.999992, 40.999992)
 scale = Vector2(2.5400007, 2.8655)
 texture = ExtResource("5_3elyd")
 
@@ -132,16 +132,16 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gf5fb")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p6t2v")
 
 [node name="File" type="Sprite2D" parent="Button4" unique_id=1713063328]
-position = Vector2(49, 57)
+position = Vector2(50, 43)
 scale = Vector2(3.06, 2.9)
 texture = ExtResource("6_p6t2v")
 
 [node name="Label" type="Label" parent="Button4" unique_id=1759912710]
 layout_mode = 0
-offset_left = 8.0
-offset_top = -2.0
-offset_right = 86.0
-offset_bottom = 125.0
+offset_left = 9.0
+offset_top = -6.0
+offset_right = 87.0
+offset_bottom = 121.0
 text = "File Shield
 
 
@@ -158,7 +158,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p6t2v")
 
 [node name="Sprite2D" type="Sprite2D" parent="Button5" unique_id=2047025387]
 z_index = 3
-position = Vector2(122.000015, 122)
+position = Vector2(46.000015, 46)
 scale = Vector2(3.0334377, 3.2649999)
 texture = ExtResource("7_gf5fb")
 
@@ -183,16 +183,16 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gf5fb")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p6t2v")
 
 [node name="Sprite2D" type="Sprite2D" parent="Button6" unique_id=1845010546]
-position = Vector2(45, 53)
+position = Vector2(49, 42)
 scale = Vector2(2.88, 3.16)
 texture = ExtResource("8_y0klt")
 
 [node name="Label" type="Label" parent="Button6" unique_id=205500825]
 layout_mode = 0
-offset_left = 28.0
-offset_top = -4.0
-offset_right = 68.0
-offset_bottom = 97.0
+offset_left = 26.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 99.0
 text = "RAM
 
 

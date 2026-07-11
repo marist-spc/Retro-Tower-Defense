@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bwcw7fxm7ou1l"]
+
+[ext_resource type="Script" uid="uid://t4u1fnodq5pb" path="res://placement.gd" id="1_2uq68"]
+[ext_resource type="Texture2D" uid="uid://0sd0mn546ln2" path="res://art/Tower Sprites/VPN Ninja-1.png.png" id="2_ekwsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(22, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+
+[node name="placement" type="Node2D" unique_id=176509300]
+script = ExtResource("1_2uq68")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1840769544]
+position = Vector2(302, 189)
+texture = ExtResource("2_ekwsb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=647847168]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=436718466]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1464228006]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1754334044]
+position = Vector2(236, 190)
+shape = SubResource("CircleShape2D_g4v7s")
